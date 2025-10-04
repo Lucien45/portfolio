@@ -6,6 +6,7 @@ import NotFound from "../pages/NotFound";
 import ThemeProvider from "../context/ThemeContext";
 import Contact from "../pages/contact";
 import Skills from "../pages/skills";
+import Experience from "../pages/experience";
 
 const Routes = () => {
   return (
@@ -16,6 +17,7 @@ const Routes = () => {
           <RouterRoutes>
             <Route path="/" element={<Homepage />} />
             <Route path="/contact" element={<Contact />} />
+            <Route path="/experience" element={<Experience />} />
             <Route path="/skills" element={<Skills />} />
             <Route path="/homepage" element={<Homepage />} />
             <Route path="*" element={<NotFound />} />
