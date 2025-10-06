@@ -8,6 +8,7 @@ import Contact from "../pages/contact";
 import Skills from "../pages/skills";
 import Experience from "../pages/experience";
 import Projects from "../pages/projects";
+import About from "../pages/about";
 
 const Routes = () => {
   return (
@@ -21,6 +22,7 @@ const Routes = () => {
             <Route path="/experience" element={<Experience />} />
             <Route path="/skills" element={<Skills />} />
             <Route path="/projects" element={<Projects />} />
+            <Route path="/about" element={<About />} />
             <Route path="/homepage" element={<Homepage />} />
             <Route path="*" element={<NotFound />} />
           </RouterRoutes>

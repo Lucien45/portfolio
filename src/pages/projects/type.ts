@@ -10,10 +10,33 @@ export type IconName =
   | "Calendar"
   | "ExternalLink"
   | "Github"
+  | "Linkedin"
   | "Eye"
   | "List"
   | "RotateCcw"
-  | "MessageCircle";
+  | "MessageCircle"
+  | "GraduationCap"
+  | "Briefcase"
+  | "Code"
+  | "Award"
+  | "CheckCircle"
+  | "ChevronUp"
+  | "ChevronDown"
+  | "Lightbulb"
+  | "Users"
+  | "Target"
+  | "MapPin"
+  | "MessageCircle"
+  | "FolderOpen"
+  | "Mail"
+  | "Phone"
+  | "Download"
+  | "Languages"
+  | "Heart"
+  | "MessageCircle"
+  ;
+
+export type StatsColor = "primary" | "secondary" | "success" | "warning" | "accent";
 
 export interface Project {
   id: number;
