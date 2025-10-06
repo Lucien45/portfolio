@@ -7,6 +7,7 @@ import ThemeProvider from "../context/ThemeContext";
 import Contact from "../pages/contact";
 import Skills from "../pages/skills";
 import Experience from "../pages/experience";
+import Projects from "../pages/projects";
 
 const Routes = () => {
   return (
@@ -19,6 +20,7 @@ const Routes = () => {
             <Route path="/contact" element={<Contact />} />
             <Route path="/experience" element={<Experience />} />
             <Route path="/skills" element={<Skills />} />
+            <Route path="/projects" element={<Projects />} />
             <Route path="/homepage" element={<Homepage />} />
             <Route path="*" element={<NotFound />} />
           </RouterRoutes>
