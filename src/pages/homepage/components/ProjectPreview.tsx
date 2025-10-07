@@ -62,7 +62,7 @@ const ProjectPreview = () => {
       status: 'Development',
       impact: 'Launching Q1 2025',
       github: 'https://github.com/Lucien45/Gestion-Article',
-      live: 'https://revendeur-frontend.onrender.com/',
+      live: 'https://gestion-article-frontoffice.onrender.com/',
       color: 'from-orange-500 to-red-500'
     }
   ];

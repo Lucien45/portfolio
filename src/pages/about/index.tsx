@@ -30,30 +30,30 @@ const About = () => {
   const stats: Stat[] = [
     {
       icon: 'GraduationCap',
-      value: '5+',
-      label: 'Years of Study',
-      description: 'MIAGE program combining CS and business management',
+      value: '4',
+      label: 'Années d\'études superieur',
+      description: 'Programme MIAGE et IRD alliant informatique et gestion d\'entreprise',
       color: 'primary'
     },
     {
       icon: 'Code',
-      value: '10+',
+      value: '8+',
       label: 'Projects Completed',
-      description: 'From academic projects to professional applications',
+      description: 'Des projets académiques aux applications professionnelles',
       color: 'secondary'
     },
     {
       icon: 'Award',
-      value: '3+',
+      value: '1',
       label: 'Certifications',
-      description: 'Including TECHLAB-JS and academic achievements',
+      description: 'Y compris TECHLAB-JS et les réalisations académiques',
       color: 'accent'
     },
     {
       icon: 'Globe',
       value: '3',
-      label: 'Languages',
-      description: 'French, English, and Malagasy fluency',
+      label: 'Langues',
+      description: 'Français, Anglais, et malgache',
       color: 'success'
     }
   ];
@@ -61,34 +61,34 @@ const About = () => {
   const coreValues: CoreValue[] = [
     {
       icon: 'Lightbulb',
-      title: 'Continuous Learning',
-      description: 'Embracing new technologies and methodologies to stay at the forefront of web development innovation.'
+      title: 'Apprentissage continu',
+      description: 'Adopter de nouvelles technologies et méthodologies pour rester à la pointe de l’innovation en matière de développement Web.'
     },
     {
       icon: 'Users',
-      title: 'Collaborative Spirit',
-      description: 'Building bridges between technical teams and business stakeholders through effective communication.'
+      title: 'Esprit de collaboration',
+      description: 'Créer des ponts entre les équipes techniques et les acteurs commerciaux grâce à une communication efficace.'
     },
     {
       icon: 'Target',
-      title: 'Quality Focus',
+      title: 'Accent sur la qualité',
       description: 'Delivering robust, scalable solutions that meet both technical excellence and business objectives.'
     },
     {
       icon: 'Globe',
-      title: 'Global Perspective',
-      description: 'Bringing unique Madagascar insights to international projects while maintaining global standards.'
+      title: 'Perspective globale',
+      description: 'Apporter des connaissances uniques sur Madagascar aux projets internationaux tout en maintenant les normes globale.'
     }
   ];
 
   return (
     <>
       <Helmet>
-        <title>About Lucien - Full Stack Developer Journey | Madagascar to Global Tech</title>
-        <meta name="description" content="Discover Lucien's journey from MIAGE student in Madagascar to full-stack developer. Bridging traditional CS foundations with modern web technologies." />
-        <meta name="keywords" content="Lucien Rakotondrabe, Madagascar developer, MIAGE, full-stack developer, React, TypeScript, ESMIA" />
-        <meta property="og:title" content="About Lucien - Full Stack Developer Journey" />
-        <meta property="og:description" content="From computer science student to full-stack developer - explore the unique journey of Madagascar talent in global tech." />
+        <title>À propos de Lucien - Parcours de développeur Full Stack | De Madagascar à la technologie globale</title>
+        <meta name="description" content="Découvrez le parcours de Lucien, d'étudiant MIAGE à Madagascar à développeur full-stack. Il allie les fondamentaux informatiques traditionnels aux technologies web modernes." />
+        <meta name="keywords" content="Savaka Lucien, développeur Madagascar, MIAGE, développeur full-stack, React, TypeScript, ESMIA" />
+        <meta property="og:title" content="À propos de Lucien - Parcours de développeur Full Stack" />
+        <meta property="og:description" content="De l'étudiant en informatique au développeur full-stack, explorez le parcours unique des talents malgaches dans la technologie globale." />
         <meta property="og:type" content="profile" />
       </Helmet>
       <div className="min-h-screen bg-background">
@@ -100,20 +100,20 @@ const About = () => {
             <div className="text-center mb-16">
               <div className="inline-flex items-center gap-2 bg-primary/10 text-primary px-4 py-2 rounded-full text-sm font-medium mb-6">
                 <Icon name="MapPin" size={16} />
-                Madagascar Talent, Global Standards
+                Talents malgaches, normes mondiales
               </div>
               
               <h1 className="text-4xl md:text-6xl font-bold text-foreground mb-6">
-                My Journey to
+                Mon voyage vers
                 <span className="block text-transparent bg-clip-text bg-gradient-to-r from-primary to-secondary">
-                  Full Stack Development
+                  Développement Full Stack
                 </span>
               </h1>
               
               <p className="text-xl text-muted-foreground max-w-3xl mx-auto leading-relaxed">
-                From ESMIA MIAGE student to professional developer, discover how I'm bridging traditional 
-                computer science foundations with modern web technologies, bringing a unique Madagascar 
-                perspective to the global tech ecosystem.
+              D'étudiant ESMIA MIAGE à développeur professionnel, découvrez comment je relie 
+              les fondements de l'informatique traditionnelle aux technologies web modernes, 
+              apportant une perspective unique de Madagascar à l'écosystème technologique mondial.
               </p>
             </div>
 
@@ -138,10 +138,10 @@ const About = () => {
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center mb-12">
               <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">
-                Meet Lucien
+                Rencontrez Lucien 
               </h2>
               <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-                Professional yet approachable, technically confident but humble about continuous learning
+                Professionnel mais accessible, techniquement confiant mais humble quant à l'apprentissage continu
               </p>
             </div>
             
@@ -154,10 +154,10 @@ const About = () => {
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center mb-12">
               <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">
-                Core Values & Approach
+                Valeurs fondamentales et approche
               </h2>
               <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-                The principles that guide my development philosophy and professional growth
+                Les principes qui guident ma philosophie de développement et ma croissance professionnelle
               </p>
             </div>
             
@@ -187,7 +187,7 @@ const About = () => {
                 Educational & Professional Journey
               </h2>
               <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-                An interactive timeline showcasing my evolution from computer science student to full-stack developer
+                Une chronologie interactive présentant mon évolution d'étudiant en informatique à développeur full-stack
               </p>
             </div>
             
