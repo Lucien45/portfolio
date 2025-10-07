@@ -12,11 +12,11 @@ const Header = () => {
   type NavItem = { name: string; path: string; icon: IconName };
 
   const navigationItems: NavItem[] = [
-    { name: 'Home', path: '/homepage', icon: 'Home' },
-    { name: 'About', path: '/about', icon: 'User' },
-    { name: 'Projects', path: '/projects', icon: 'FolderOpen' },
-    { name: 'Skills', path: '/skills', icon: 'Code' },
-    { name: 'Experience', path: '/experience', icon: 'Briefcase' },
+    { name: 'Accueil', path: '/homepage', icon: 'Home' },
+    { name: 'À propos', path: '/about', icon: 'User' },
+    { name: 'Projets', path: '/projects', icon: 'FolderOpen' },
+    { name: 'compétences', path: '/skills', icon: 'Code' },
+    { name: 'Expérience', path: '/experience', icon: 'Briefcase' },
   ];
 
   const moreItems: NavItem[] = [
@@ -93,7 +93,7 @@ const Header = () => {
             <div className="relative group">
               <button className="flex items-center space-x-2 px-3 py-2 rounded-md text-sm font-medium text-muted-foreground hover:text-foreground hover:bg-muted transition-brand">
                 <Icon name="MoreHorizontal" size={16} />
-                <span>More</span>
+                <span>Plus</span>
               </button>
               
               <div className="absolute right-0 top-full mt-1 w-48 bg-popover border border-border rounded-md shadow-elevation opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-50">
@@ -127,7 +127,7 @@ const Header = () => {
               size="sm"
               iconName="Github"
               iconPosition="left"
-              onClick={() => window.open('https://github.com', '_blank')}
+              onClick={() => window.open('https://github.com/Lucien45', '_blank')}
             >
               GitHub
             </Button>
@@ -137,7 +137,7 @@ const Header = () => {
               iconName="MessageCircle"
               iconPosition="left"
             >
-              Let's Talk
+              Parlons
             </Button>
           </div>
 
@@ -187,7 +187,7 @@ const Header = () => {
                 iconName="Github"
                 iconPosition="left"
                 onClick={() => {
-                  window.open('https://github.com', '_blank');
+                  window.open('https://github.com/Lucien45', '_blank');
                   closeMenu();
                 }}
               >
@@ -201,7 +201,7 @@ const Header = () => {
                 iconPosition="left"
                 onClick={closeMenu}
               >
-                Let's Talk
+                Parlons
               </Button>
             </div>
           </nav>

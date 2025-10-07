@@ -22,46 +22,46 @@ const Homepage = () => {
   return (
     <>
       <Helmet>
-        <title>Lucien Razafy - Full-Stack Developer | Madagascar Tech Talent</title>
+        <title>Rafaralahy S.Lucien - Développeur Full Stack | Madagascar Tech Talent</title>
         <meta 
           name="description" 
-          content="Passionate full-stack developer from Madagascar specializing in React, TypeScript, and Node.js. Bridging traditional computer science with modern web technologies." 
+          content="Développeur full-stack passionné originaire de Madagascar, spécialisé en React, TypeScript, Python et Node.js. Il allie l'informatique traditionnelle aux technologies web modernes." 
         />
-        <meta name="keywords" content="full-stack developer, React developer, TypeScript, Node.js, Madagascar developer, web development, MESUPRES, FC FOUDRE" />
-        <meta name="author" content="Lucien Razafy" />
+        <meta name="keywords" content="Développeur full-stack, développeur React, TypeScript, Node.js, python, développeur Madagascar, développement web" />
+        <meta name="author" content="Lucien Rafaralahy" />
         
         {/* Open Graph */}
-        <meta property="og:title" content="Lucien Razafy - Full-Stack Developer" />
-        <meta property="og:description" content="Passionate full-stack developer from Madagascar combining traditional CS foundations with cutting-edge web technologies." />
+        <meta property="og:title" content="Lucien Rafaralahy - Full-Stack Developer" />
+        <meta property="og:description" content="Développeur full-stack passionné originaire de Madagascar combinant les bases traditionnelles de l'informatique avec des technologies Web de pointe." />
         <meta property="og:type" content="website" />
-        <meta property="og:url" content="https://lucienrazafy.dev" />
-        <meta property="og:image" content="https://lucienrazafy.dev/og-image.jpg" />
+        <meta property="og:url" content="https://lucienrafaralahy.dev" />
+        <meta property="og:image" content="https://lucienrafaralahy.dev/og-image.jpg" />
         
         {/* Twitter Card */}
         <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content="Lucien Razafy - Full-Stack Developer" />
-        <meta name="twitter:description" content="Passionate full-stack developer from Madagascar combining traditional CS foundations with cutting-edge web technologies." />
-        <meta name="twitter:image" content="https://lucienrazafy.dev/twitter-image.jpg" />
+        <meta name="twitter:title" content="Lucien Rafaralahy - Full-Stack Developer" />
+        <meta name="twitter:description" content="Développeur full-stack passionné originaire de Madagascar combinant les bases traditionnelles de l'informatique avec des technologies Web de pointe." />
+        <meta name="twitter:image" content="https://lucienrafaralahy.dev/twitter-image.jpg" />
         
         {/* Additional SEO */}
         <meta name="robots" content="index, follow" />
-        <meta name="language" content="English" />
+        <meta name="language" content="French" />
         <meta name="geo.region" content="MG" />
         <meta name="geo.country" content="Madagascar" />
-        <link rel="canonical" href="https://lucienrazafy.dev" />
+        <link rel="canonical" href="https://lucienrafaralahy.dev" />
         
         {/* Structured Data */}
         <script type="application/ld+json">
           {JSON.stringify({
             "@context": "https://schema.org",
             "@type": "Person",
-            "name": "Lucien Razafy",
+            "name": "Lucien Rafaralahy",
             "jobTitle": "Full-Stack Developer",
-            "description": "Passionate full-stack developer from Madagascar specializing in React, TypeScript, and Node.js",
-            "url": "https://lucienrazafy.dev",
+            "description": "Développeur full-stack passionné originaire de Madagascar combinant les bases traditionnelles de l'informatique avec des technologies Web de pointe.",
+            "url": "https://lucienrafaralahy.dev",
             "sameAs": [
-              "https://github.com/lucienrazafy",
-              "https://linkedin.com/in/lucien-razafy"
+              "https://github.com/Lucien45",
+              "https://www.linkedin.com/in/savaka-lucien-rafaralahy-451924315/"
             ],
             "address": {
               "@type": "PostalAddress",
@@ -74,7 +74,7 @@ const Homepage = () => {
               "Java",
               "Python",
               "Full-Stack Development",
-              "Web Development"
+              "Web & Mobile Development"
             ]
           })}
         </script>
@@ -111,15 +111,15 @@ const Homepage = () => {
                   <div className="w-8 h-8 bg-gradient-to-br from-primary to-secondary rounded-lg flex items-center justify-center">
                     <span className="text-white font-mono font-medium text-sm">L</span>
                   </div>
-                  <span className="text-lg font-semibold text-foreground">Lucien Razafy</span>
+                  <span className="text-lg font-semibold text-foreground">Rafaralahy Savaka Lucien</span>
                 </div>
                 <p className="text-muted-foreground mb-4 max-w-md">
-                  Full-stack developer from Madagascar, bridging traditional computer science 
-                  foundations with cutting-edge web technologies.
+                  Développeur full-stack originaire de Madagascar, 
+                  alliant les fondements traditionnels de l'informatique aux technologies web de pointe.
                 </p>
                 <div className="flex space-x-4">
                   <a 
-                    href="https://github.com" 
+                    href="https://github.com/Lucien45" 
                     target="_blank" 
                     rel="noopener noreferrer"
                     className="text-muted-foreground hover:text-foreground transition-colors"
@@ -127,7 +127,7 @@ const Homepage = () => {
                     <Icon name="Github" size={20} />
                   </a>
                   <a 
-                    href="https://linkedin.com" 
+                    href="https://www.linkedin.com/in/savaka-lucien-rafaralahy-451924315/" 
                     target="_blank" 
                     rel="noopener noreferrer"
                     className="text-muted-foreground hover:text-foreground transition-colors"
@@ -135,7 +135,7 @@ const Homepage = () => {
                     <Icon name="Linkedin" size={20} />
                   </a>
                   <a 
-                    href="mailto:lucien.razafy@example.com"
+                    href="mailto:savakalucien@gmail.com"
                     className="text-muted-foreground hover:text-foreground transition-colors"
                   >
                     <Icon name="Mail" size={20} />
@@ -145,12 +145,12 @@ const Homepage = () => {
 
               {/* Quick Links */}
               <div>
-                <h3 className="font-semibold text-foreground mb-4">Quick Links</h3>
+                <h3 className="font-semibold text-foreground mb-4">Liens rapides</h3>
                 <ul className="space-y-2">
-                  <li><a href="/about" className="text-muted-foreground hover:text-foreground transition-colors">About</a></li>
-                  <li><a href="/projects" className="text-muted-foreground hover:text-foreground transition-colors">Projects</a></li>
-                  <li><a href="/skills" className="text-muted-foreground hover:text-foreground transition-colors">Skills</a></li>
-                  <li><a href="/experience" className="text-muted-foreground hover:text-foreground transition-colors">Experience</a></li>
+                  <li><a href="/about" className="text-muted-foreground hover:text-foreground transition-colors">À propos</a></li>
+                  <li><a href="/projects" className="text-muted-foreground hover:text-foreground transition-colors">Projets</a></li>
+                  <li><a href="/skills" className="text-muted-foreground hover:text-foreground transition-colors">compétences</a></li>
+                  <li><a href="/experience" className="text-muted-foreground hover:text-foreground transition-colors">Expérience</a></li>
                   <li><a href="/contact" className="text-muted-foreground hover:text-foreground transition-colors">Contact</a></li>
                 </ul>
               </div>
@@ -159,18 +159,18 @@ const Homepage = () => {
               <div>
                 <h3 className="font-semibold text-foreground mb-4">Services</h3>
                 <ul className="space-y-2">
-                  <li className="text-muted-foreground">Full-Stack Development</li>
+                  <li className="text-muted-foreground">Développement Full Stack</li>
                   <li className="text-muted-foreground">React Applications</li>
-                  <li className="text-muted-foreground">API Development</li>
-                  <li className="text-muted-foreground">Database Design</li>
-                  <li className="text-muted-foreground">Technical Consulting</li>
+                  <li className="text-muted-foreground">Développement d'API</li>
+                  <li className="text-muted-foreground">Conception de base de données</li>
+                  <li className="text-muted-foreground">Conseil technique</li>
                 </ul>
               </div>
             </div>
 
             <div className="border-t border-border mt-8 pt-8 flex flex-col md:flex-row justify-between items-center">
               <p className="text-muted-foreground text-sm">
-                © {new Date()?.getFullYear()} Lucien Razafy. All rights reserved.
+                © {new Date()?.getFullYear()} Rafaralahy Savaka Lucien. Tous droits réservés.
               </p>
               <p className="text-muted-foreground text-sm mt-2 md:mt-0">
                 Made with ❤️ in Madagascar 🇲🇬

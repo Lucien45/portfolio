@@ -80,11 +80,13 @@ const StickySkillsBar = () => {
     <AnimatePresence>
       {isVisible && (
         <motion.div
-          initial={{ y: -100, opacity: 0 }}
-          animate={{ y: 0, opacity: 1 }}
-          exit={{ y: -100, opacity: 0 }}
-          transition={{ duration: 0.3, ease: "easeOut" }}
-          className="fixed top-16 left-0 right-0 z-40 bg-background/95 backdrop-blur-sm border-b border-border shadow-soft"
+          {...{
+            initial: { y: -100, opacity: 0 },
+            animate: { y: 0, opacity: 1 },
+            exit: { y: -100, opacity: 0 },
+            transition: { duration: 0.3, ease: "easeOut" },
+            className:'fixed top-16 left-0 right-0 z-40 bg-background/95 backdrop-blur-sm border-b border-border shadow-soft'
+          }}
         >
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="flex items-center justify-between py-3">
@@ -92,16 +94,17 @@ const StickySkillsBar = () => {
               <div className="flex items-center space-x-4">
                 <div className="flex items-center space-x-2">
                   <div className={`w-2 h-2 rounded-full ${skills?.[activeSkill]?.color} animate-pulse`}></div>
-                  <span className="text-sm font-mono text-muted-foreground">Currently showcasing:</span>
+                  <span className="text-sm font-mono text-muted-foreground">À l’affiche:</span>
                 </div>
-                
                 <motion.div
-                  key={activeSkill}
-                  initial={{ opacity: 0, x: 20 }}
-                  animate={{ opacity: 1, x: 0 }}
-                  exit={{ opacity: 0, x: -20 }}
-                  transition={{ duration: 0.3 }}
-                  className="flex items-center space-x-3 bg-card border border-border rounded-full px-4 py-2"
+                  {...{
+                    key: activeSkill,
+                    initial: { opacity: 0, x: 20 },
+                    animate: { opacity: 1, x: 0 },
+                    exit: { opacity: 0, x: -20 },
+                    transition: { duration: 0.3 },
+                    className: "flex items-center space-x-3 bg-card border border-border rounded-full px-4 py-2"
+                  }}
                 >
                   <Icon name={skills?.[activeSkill]?.icon} size={16} className="text-primary" />
                   <span className="font-semibold text-foreground">{skills?.[activeSkill]?.name}</span>
@@ -110,12 +113,13 @@ const StickySkillsBar = () => {
                   </span>
                   <div className="flex items-center space-x-1">
                     <div className="w-16 bg-muted rounded-full h-1.5">
-                      <motion.div
-                        initial={{ width: 0 }}
-                        animate={{ width: `${skills?.[activeSkill]?.level}%` }}
-                        transition={{ duration: 0.8, ease: "easeOut" }}
-                        className={`h-1.5 rounded-full ${skills?.[activeSkill]?.color}`}
-                      />
+                      <div className={`h-1.5 rounded-full ${skills?.[activeSkill]?.color}`}>
+                        <motion.div
+                          initial={{ width: 0 }}
+                          animate={{ width: `${skills?.[activeSkill]?.level}%` }}
+                          transition={{ duration: 0.8, ease: "easeOut" }}
+                        />
+                      </div>
                     </div>
                     <span className="text-xs font-mono text-muted-foreground ml-2">
                       {skills?.[activeSkill]?.level}%
@@ -128,15 +132,17 @@ const StickySkillsBar = () => {
               <div className="hidden md:flex items-center space-x-2">
                 {skills?.map((skill, index) => (
                   <motion.button
-                    key={skill?.name}
-                    onClick={() => setActiveSkill(index)}
-                    className={`relative p-2 rounded-lg transition-all duration-200 ${
-                      index === activeSkill 
-                        ? 'bg-primary text-primary-foreground shadow-soft' 
-                        : 'bg-muted text-muted-foreground hover:bg-card hover:text-foreground'
-                    }`}
-                    whileHover={{ scale: 1.05 }}
-                    whileTap={{ scale: 0.95 }}
+                    {...{
+                      key: skill?.name,
+                      onClick: () => setActiveSkill(index),
+                      className: `relative p-2 rounded-lg transition-all duration-200 ${
+                        index === activeSkill 
+                          ? 'bg-primary text-primary-foreground shadow-soft' 
+                          : 'bg-muted text-muted-foreground hover:bg-card hover:text-foreground'
+                      }`,
+                      whileHover: { scale: 1.05 },
+                      whileTap: { scale: 0.95 },
+                    }}
                   >
                     <Icon name={skill?.icon} size={16} />
                     

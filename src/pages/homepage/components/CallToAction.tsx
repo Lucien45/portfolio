@@ -22,41 +22,41 @@ const CallToAction = () => {
   const ctaOptions: CtaOption[] = [
     {
       id: 'hire',
-      title: 'Ready to Hire?',
-      description: 'Looking for a dedicated full-stack developer to join your team? Let\'s discuss how I can contribute to your next project.',
+      title: 'Prêt à embaucher?',
+      description: 'Vous recherchez un développeur full-stack dédié pour rejoindre votre équipe ? Discutons de la contribution que je peux apporter à votre prochain projet.',
       icon: 'Briefcase',
       color: 'from-primary to-blue-600',
-      action: 'Schedule Interview',
+      action: 'Planifier un entretien',
       link: '/contact',
-      features: ['Full-time positions', 'Remote work ready', 'Immediate availability', 'Competitive rates']
+      features: ['Postes à temps plein', 'Prêt pour le travail à distance', 'Disponibilité immédiate', 'Tarifs compétitifs']
     },
     {
       id: 'project',
-      title: 'Have a Project?',
-      description: 'Need a custom web application or want to modernize your existing system? I\'m here to bring your ideas to life.',
+      title: 'Vous avez un projet ?',
+      description: 'Besoin d\'une application web personnalisée ou souhaitez moderniser votre système existant ? Je suis là pour donner vie à vos idées.',
       icon: 'Rocket',
       color: 'from-secondary to-green-600',
-      action: 'Start Project',
+      action: 'Démarrer le projet',
       link: '/contact',
-      features: ['Custom development', 'Modern tech stack', 'Scalable solutions', 'Ongoing support']
+      features: ['Développement personnalisé', 'Pile technologique moderne', 'Solutions évolutives', 'Un soutien continu']
     },
     {
       id: 'collaborate',
-      title: 'Let\'s Collaborate',
-      description: 'Fellow developer or tech enthusiast? I\'m always open to collaborating on interesting projects and sharing knowledge.',
+      title: 'Collaborons',
+      description: 'Développeur ou passionné de technologie ? Je suis toujours ouvert à la collaboration sur des projets intéressants et au partage de connaissances.',
       icon: 'Users',
       color: 'from-accent to-orange-600',
-      action: 'Connect Now',
+      action: 'Connectez-vous maintenant',
       link: '/contact',
-      features: ['Open source projects', 'Knowledge sharing', 'Mentorship', 'Tech community']
+      features: ['Projets open source', 'Partage de connaissances', 'Mentorship', 'Communauté technologique']
     }
   ];
 
   const quickStats: { label: string; value: string; icon: IconName }[] = [
-    { label: 'Response Time', value: '< 24h', icon: 'Clock' },
-    { label: 'Project Success', value: '100%', icon: 'CheckCircle' },
-    { label: 'Client Satisfaction', value: '5/5', icon: 'Star' },
-    { label: 'Availability', value: 'Open', icon: 'Calendar' }
+    { label: 'Temps de réponse', value: '< 24h', icon: 'Clock' },
+    { label: 'Succès du projet', value: '100%', icon: 'CheckCircle' },
+    { label: 'Satisfaction des clients', value: '5/5', icon: 'Star' },
+    { label: 'Disponibilité', value: 'Open', icon: 'Calendar' }
   ];
 
   return (
@@ -70,18 +70,20 @@ const CallToAction = () => {
       <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section Header */}
         <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6 }}
-          viewport={{ once: true }}
-          className="text-center mb-16"
+          {...{
+            initial:{ opacity: 0, y: 20 },
+            whileInView:{ opacity: 1, y: 0 },
+            transition:{ duration: 0.6 },
+            viewport:{ once: true },
+            className:"text-center mb-16"
+          }}
         >
           <h2 className="text-3xl sm:text-4xl font-bold text-foreground mb-4">
-            Ready to Work Together?
+            Prêt à travailler ensemble ?
           </h2>
           <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-            Whether you're looking to hire, start a project, or collaborate, 
-            I'm excited to hear about your next big idea.
+            Que vous cherchiez à embaucher, à démarrer un projet ou à collaborer, 
+            je suis impatient de connaître votre prochaine grande idée.
           </p>
         </motion.div>
 
@@ -89,14 +91,16 @@ const CallToAction = () => {
         <div className="grid md:grid-cols-3 gap-8 mb-16">
           {ctaOptions?.map((option, index) => (
             <motion.div
-              key={option?.id}
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: index * 0.1 }}
-              viewport={{ once: true }}
-              onMouseEnter={() => setHoveredCard(option?.id)}
-              onMouseLeave={() => setHoveredCard(null)}
-              className="group relative bg-card border border-border rounded-xl p-8 hover:shadow-elevation transition-all duration-300 overflow-hidden"
+              {...{
+                key:option?.id,
+                initial:{ opacity: 0, y: 30 },
+                whileInView:{ opacity: 1, y: 0 },
+                transition:{ duration: 0.6, delay: index * 0.1 },
+                viewport:{ once: true },
+                onMouseEnter:() => setHoveredCard(option?.id),
+                onMouseLeave:() => setHoveredCard(null),
+                className:"group relative bg-card border border-border rounded-xl p-8 hover:shadow-elevation transition-all duration-300 overflow-hidden"
+              }}
             >
               {/* Background Gradient */}
               <div className={`absolute inset-0 bg-gradient-to-br ${option?.color} opacity-0 group-hover:opacity-5 transition-opacity duration-300`}></div>
@@ -148,26 +152,30 @@ const CallToAction = () => {
 
         {/* Quick Stats */}
         <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6, delay: 0.4 }}
-          viewport={{ once: true }}
-          className="bg-card border border-border rounded-xl p-8 mb-12"
+          {...{
+            initial:{ opacity: 0, y: 20 },
+            whileInView:{ opacity: 1, y: 0 },
+            transition:{ duration: 0.6, delay: 0.4 },
+            viewport:{ once: true },
+            className:"bg-card border border-border rounded-xl p-8 mb-12"
+          }}
         >
           <div className="text-center mb-8">
-            <h3 className="text-xl font-semibold text-foreground mb-2">Why Choose Me?</h3>
-            <p className="text-muted-foreground">Professional commitment backed by results</p>
+            <h3 className="text-xl font-semibold text-foreground mb-2">Pourquoi me choisir ?</h3>
+            <p className="text-muted-foreground">Un engagement professionnel soutenu par des résultats</p>
           </div>
 
           <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
             {quickStats?.map((stat, index) => (
               <motion.div
-                key={stat?.label}
-                initial={{ opacity: 0, scale: 0.8 }}
-                whileInView={{ opacity: 1, scale: 1 }}
-                transition={{ duration: 0.4, delay: index * 0.1 }}
-                viewport={{ once: true }}
-                className="text-center group"
+                {...{
+                  key:stat?.label,
+                  initial:{ opacity: 0, scale: 0.8 },
+                  whileInView:{ opacity: 1, scale: 1 },
+                  transition:{ duration: 0.4, delay: index * 0.1 },
+                  viewport:{ once: true },
+                  className:"text-center group"
+                }}
               >
                 <div className="inline-flex items-center justify-center w-12 h-12 bg-primary/10 text-primary rounded-lg mb-3 group-hover:bg-primary group-hover:text-primary-foreground transition-all duration-200">
                   <Icon name={stat?.icon} size={20} />
@@ -181,17 +189,19 @@ const CallToAction = () => {
 
         {/* Contact Information */}
         <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6, delay: 0.6 }}
-          viewport={{ once: true }}
-          className="text-center bg-gradient-to-r from-primary/5 via-secondary/5 to-accent/5 rounded-xl p-8"
+          {...{
+            initial:{ opacity: 0, y: 20 },
+            whileInView:{ opacity: 1, y: 0 },
+            transition:{ duration: 0.6, delay: 0.6 },
+            viewport:{ once: true },
+            className:"text-center bg-gradient-to-r from-primary/5 via-secondary/5 to-accent/5 rounded-xl p-8"
+          }}
         >
           <h3 className="text-xl font-semibold text-foreground mb-4">
-            Prefer Direct Contact?
+            Vous préférez le contact direct ?
           </h3>
           <p className="text-muted-foreground mb-6">
-            Feel free to reach out directly. I'm always happy to discuss new opportunities.
+            N'hésitez pas à me contacter directement. Je suis toujours ravi de discuter de nouvelles opportunités.
           </p>
           
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
@@ -200,9 +210,9 @@ const CallToAction = () => {
               size="lg"
               iconName="Mail"
               iconPosition="left"
-              onClick={() => window.location.href = 'mailto:lucien.razafy@example.com'}
+              onClick={() => window.location.href = 'mailto:savakalucien@gmail.com'}
             >
-              lucien.razafy@example.com
+              savakalucien@gmail.com
             </Button>
             
             <Button
@@ -210,9 +220,9 @@ const CallToAction = () => {
               size="lg"
               iconName="Phone"
               iconPosition="left"
-              onClick={() => window.location.href = 'tel:+261123456789'}
+              onClick={() => window.location.href = 'tel:+261328754672'}
             >
-              +261 12 345 6789
+              +261 32 87 546 72
             </Button>
             
             <Button
@@ -220,7 +230,7 @@ const CallToAction = () => {
               size="lg"
               iconName="Linkedin"
               iconPosition="left"
-              onClick={() => window.open('https://linkedin.com/in/lucien-razafy', '_blank')}
+              onClick={() => window.open('https://www.linkedin.com/in/savaka-lucien-rafaralahy-451924315/', '_blank')}
             >
               LinkedIn
             </Button>

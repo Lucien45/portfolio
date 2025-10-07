@@ -25,44 +25,44 @@ const ProjectPreview = () => {
   const featuredProjects: Project[] = [
     {
       id: 1,
-      title: 'MESUPRES Registry System',
+      title: 'School Management',
       category: 'Full-Stack Web Application',
-      description: 'Comprehensive student registration and management system for Madagascar\'s higher education ministry. Built with React, Node.js, and PostgreSQL.',
+      description: 'School-Management SAAS est une plateforme web moderne conçue pour aider les établissements scolaires à gérer efficacement leurs opérations quotidiennes. Construit avec React, Nest.js et PostgreSQL.',
       image: 'https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=600&h=400&fit=crop',
-      technologies: ['React', 'TypeScript', 'Node.js', 'PostgreSQL', 'Express'],
+      technologies: ['React', 'TypeScript', 'Nest.js', 'PostgreSQL', 'Docker'],
       features: ['Student Registration', 'Document Management', 'Real-time Analytics', 'Multi-language Support'],
       status: 'Production',
       impact: '10,000+ students registered',
-      github: 'https://github.com',
-      live: 'https://mesupres.mg',
+      github: 'https://github.com/Lucien45/School-Management',
+      live: 'https://School-Management.mg',
       color: 'from-blue-500 to-purple-600'
     },
     {
       id: 2,
       title: 'FC FOUDRE Club Website',
       category: 'Sports Club Platform',
-      description: 'Modern responsive website for football club featuring team management, match schedules, and fan engagement tools.',
+      description: 'Site Web réactif moderne pour club de football comprenant la gestion d\'équipe, les calendriers des matchs et les outils d\'engagement des fans.',
       image: 'https://images.unsplash.com/photo-1574629810360-7efbbe195018?w=600&h=400&fit=crop',
-      technologies: ['React', 'Tailwind CSS', 'Firebase', 'Framer Motion'],
+      technologies: ['React', 'TypeScript', 'CSS', 'Nest.js', 'PostgreSQL', 'Docker'],
       features: ['Team Roster', 'Match Calendar', 'News & Updates', 'Fan Gallery'],
       status: 'Live',
       impact: '2,000+ active users',
-      github: 'https://github.com',
+      github: 'https://github.com/Lucien45',
       live: 'https://fcfoudre.com',
       color: 'from-green-500 to-blue-500'
     },
     {
       id: 3,
-      title: 'E-Commerce Platform',
+      title: 'Plateforme de Gestion d\'Article',
       category: 'Full-Stack Application',
-      description: 'Scalable e-commerce solution with advanced features including inventory management, payment processing, and analytics dashboard.',
+      description: 'Gestion-Article est une plateforme complète de gestion et publication d\'articles développée avec NestJS. Le projet comprend un back-office pour la gestion administrative, un front-office pour la consultation publique, et une API robuste basée sur PostgreSQL.',
       image: 'https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?w=600&h=400&fit=crop',
-      technologies: ['Next.js', 'TypeScript', 'Stripe', 'MongoDB', 'Redis'],
-      features: ['Product Catalog', 'Payment Gateway', 'Order Tracking', 'Admin Dashboard'],
+      technologies: ['Next.js', 'TypeScript', 'React', 'PostgresQL', 'Tailwind CSS', 'Docker', 'Render'],
+      features: ['Article Catalog', 'Order Tracking', 'Admin Dashboard'],
       status: 'Development',
       impact: 'Launching Q1 2025',
-      github: 'https://github.com',
-      live: null,
+      github: 'https://github.com/Lucien45/Gestion-Article',
+      live: 'https://revendeur-frontend.onrender.com/',
       color: 'from-orange-500 to-red-500'
     }
   ];
@@ -72,24 +72,25 @@ const ProjectPreview = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section Header */}
         <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6 }}
-          viewport={{ once: true }}
-          className="text-center mb-16"
+          {...{
+            initial:{ opacity: 0, y: 20 },
+            whileInView:{ opacity: 1, y: 0 },
+            transition:{ duration: 0.6 },
+            viewport:{ once: true },
+            className:"text-center mb-16"
+          }}
         >
           <div className="flex items-center justify-center space-x-2 mb-4">
             <Icon name="FolderOpen" size={24} className="text-primary" />
             <span className="text-sm font-mono text-muted-foreground uppercase tracking-wider">
-              Featured Work
+              Œuvre en vedette
             </span>
           </div>
           <h2 className="text-3xl sm:text-4xl font-bold text-foreground mb-4">
-            Project Showcase
+            Vitrine du projet
           </h2>
           <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-            Real-world applications that demonstrate my expertise in full-stack development, 
-            from concept to deployment.
+            Des applications concrètes qui démontrent mon expertise en développement full-stack, du concept au déploiement.
           </p>
         </motion.div>
 
@@ -97,13 +98,14 @@ const ProjectPreview = () => {
         <div className="grid lg:grid-cols-3 gap-8 mb-12">
           {featuredProjects?.map((project, index) => (
             <motion.div
-              key={project?.id}
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: index * 0.1 }}
-              viewport={{ once: true }}
-              
-              className="group bg-card border border-border rounded-xl overflow-hidden shadow-soft hover:shadow-elevation transition-all duration-300"
+              {...{
+                key:project?.id,
+                initial:{ opacity: 0, y: 30 },
+                whileInView:{ opacity: 1, y: 0 },
+                transition:{ duration: 0.6, delay: index * 0.1 },
+                viewport:{ once: true },
+                className:"group bg-card border border-border rounded-xl overflow-hidden shadow-soft hover:shadow-elevation transition-all duration-300"
+              }}
             >
               {/* Project Image */}
               <div className="relative overflow-hidden">
@@ -221,11 +223,13 @@ const ProjectPreview = () => {
 
         {/* View All Projects CTA */}
         <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6, delay: 0.4 }}
-          viewport={{ once: true }}
-          className="text-center"
+          {...{
+            initial:{ opacity: 0, y: 20 },
+            whileInView:{ opacity: 1, y: 0 },
+            transition:{ duration: 0.6, delay: 0.4 },
+            viewport:{ once: true },
+            className:"text-center"
+          }}
         >
           <Link to="/projects">
             <Button
@@ -235,7 +239,7 @@ const ProjectPreview = () => {
               iconPosition="right"
               className="group"
             >
-              View All Projects
+              Voir tous les projets
               <Icon 
                 name="ArrowRight" 
                 size={16} 
@@ -247,31 +251,33 @@ const ProjectPreview = () => {
 
         {/* GitHub Activity */}
         <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6, delay: 0.6 }}
-          viewport={{ once: true }}
-          className="mt-20 bg-card border border-border rounded-xl p-8"
+          {...{
+            initial:{ opacity: 0, y: 20 },
+            whileInView:{ opacity: 1, y: 0 },
+            transition:{ duration: 0.6, delay: 0.6 },
+            viewport:{ once: true },
+            className:"mt-20 bg-card border border-border rounded-xl p-8"
+          }}
         >
           <div className="flex items-center justify-between mb-6">
             <div className="flex items-center space-x-3">
               <Icon name="Github" size={24} className="text-foreground" />
-              <h3 className="text-xl font-semibold text-foreground">GitHub Activity</h3>
+              <h3 className="text-xl font-semibold text-foreground">Activité GitHub</h3>
             </div>
             <Button
               variant="ghost"
               size="sm"
               iconName="ExternalLink"
               iconPosition="right"
-              onClick={() => window.open('https://github.com', '_blank')}
+              onClick={() => window.open('https://github.com/Lucien45', '_blank')}
             >
-              View Profile
+              Voir le profil
             </Button>
           </div>
 
           <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
             <div className="text-center">
-              <div className="text-2xl font-bold text-primary mb-1">127</div>
+              <div className="text-2xl font-bold text-primary mb-1">34</div>
               <div className="text-sm text-muted-foreground">Repositories</div>
             </div>
             <div className="text-center">
@@ -283,7 +289,7 @@ const ProjectPreview = () => {
               <div className="text-sm text-muted-foreground">Pull Requests</div>
             </div>
             <div className="text-center">
-              <div className="text-2xl font-bold text-github-green mb-1">23</div>
+              <div className="text-2xl font-bold text-github-green mb-1">4+</div>
               <div className="text-sm text-muted-foreground">Contributors</div>
             </div>
           </div>

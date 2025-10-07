@@ -20,29 +20,28 @@ const TechShowcase = () => {
 
   const techCategories: Record<CategoryKey, TechCategory> = {
     frontend: {
-      title: 'Frontend Mastery',
+      title: 'Maîtrise du Frontend',
       icon: 'Monitor',
       color: 'text-blue-500',
       bgColor: 'bg-blue-500/10',
       technologies: [
-        { name: 'React 18', level: 95, icon: 'Code', experience: '3+ years' },
-        { name: 'TypeScript', level: 90, icon: 'FileCode', experience: '2+ years' },
-        { name: 'Next.js', level: 88, icon: 'Globe', experience: '2+ years' },
-        { name: 'Tailwind CSS', level: 92, icon: 'Palette', experience: '3+ years' },
+        { name: 'React', level: 95, icon: 'Code', experience: '1+ years' },
+        { name: 'TypeScript', level: 90, icon: 'FileCode', experience: '1+ years' },
+        { name: 'Tailwind CSS', level: 92, icon: 'Palette', experience: '1+ years' },
         { name: 'Framer Motion', level: 85, icon: 'Zap', experience: '1+ years' }
       ]
     },
     backend: {
-      title: 'Backend Architecture',
+      title: 'Architecture Backend',
       icon: 'Server',
       color: 'text-green-500',
       bgColor: 'bg-green-500/10',
       technologies: [
-        { name: 'Node.js', level: 85, icon: 'Server', experience: '2+ years' },
-        { name: 'Express.js', level: 88, icon: 'Layers', experience: '2+ years' },
-        { name: 'Java Spring', level: 87, icon: 'Coffee', experience: '3+ years' },
-        { name: 'Python Django', level: 82, icon: 'Code2', experience: '2+ years' },
-        { name: 'REST APIs', level: 90, icon: 'Link', experience: '3+ years' }
+        { name: 'Nest.js', level: 85, icon: 'Server', experience: '1+ years' },
+        { name: 'Express.js', level: 88, icon: 'Layers', experience: '1+ years' },
+        { name: 'Java Spring', level: 87, icon: 'Coffee', experience: '1+ years' },
+        { name: 'Python Django', level: 82, icon: 'Code2', experience: '1+ years' },
+        { name: 'REST APIs', level: 90, icon: 'Link', experience: '1+ years' }
       ]
     },
     database: {
@@ -52,14 +51,12 @@ const TechShowcase = () => {
       bgColor: 'bg-purple-500/10',
       technologies: [
         { name: 'PostgreSQL', level: 87, icon: 'Database', experience: '2+ years' },
-        { name: 'MongoDB', level: 85, icon: 'Layers', experience: '2+ years' },
+        { name: 'MongoDB', level: 85, icon: 'Layers', experience: '1+ years' },
         { name: 'MySQL', level: 90, icon: 'Database', experience: '3+ years' },
-        { name: 'Redis', level: 78, icon: 'Zap', experience: '1+ years' },
-        { name: 'Prisma ORM', level: 83, icon: 'Link', experience: '1+ years' }
       ]
     },
     tools: {
-      title: 'Development Tools',
+      title: 'Outils de développement',
       icon: 'Wrench',
       color: 'text-orange-500',
       bgColor: 'bg-orange-500/10',
@@ -68,7 +65,7 @@ const TechShowcase = () => {
         { name: 'Docker', level: 80, icon: 'Package', experience: '1+ years' },
         { name: 'VS Code', level: 95, icon: 'Code', experience: '4+ years' },
         { name: 'Postman', level: 88, icon: 'Send', experience: '2+ years' },
-        { name: 'Figma', level: 75, icon: 'Palette', experience: '2+ years' }
+        { name: 'JIRA Atlasian', level: 75, icon: 'Palette', experience: '1+ years' }
       ]
     }
   };
@@ -147,28 +144,32 @@ CMD ["npm", "start"]`
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section Header */}
         <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6 }}
-          viewport={{ once: true }}
-          className="text-center mb-16"
+          {...{
+            initial:{ opacity: 0, y: 20 },
+            whileInView:{ opacity: 1, y: 0 },
+            transition:{ duration: 0.6 },
+            viewport:{ once: true },
+            className:"text-center mb-16"
+          }}
         >
           <h2 className="text-3xl sm:text-4xl font-bold text-foreground mb-4">
-            Technical Expertise
+          Expertise technique
           </h2>
           <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-            From traditional computer science foundations to cutting-edge web technologies. 
-            Here's my technical arsenal for building scalable digital solutions.
+          Des fondements de l'informatique traditionnelle aux technologies 
+          web de pointe. Voici mon arsenal technique pour créer des solutions numériques évolutives.
           </p>
         </motion.div>
 
         {/* Category Tabs */}
         <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6, delay: 0.2 }}
-          viewport={{ once: true }}
-          className="flex flex-wrap justify-center gap-4 mb-12"
+          {...{
+            initial:{ opacity: 0, y: 20 },
+            whileInView:{ opacity: 1, y: 0 },
+            transition:{ duration: 0.6, delay: 0.2 },
+            viewport:{ once: true },
+            className:"flex flex-wrap justify-center gap-4 mb-12"
+          }}
         >
           {Object.entries(techCategories)?.map(([key, category]) => (
             <button
@@ -190,11 +191,13 @@ CMD ["npm", "start"]`
         <div className="grid lg:grid-cols-2 gap-12 items-start">
           {/* Technologies List */}
           <motion.div
-            key={activeCategory}
-            initial={{ opacity: 0, x: -20 }}
-            animate={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.5 }}
-            className="space-y-6"
+            {...{
+              key:activeCategory,
+              initial:{ opacity: 0, x: -20 },
+              animate:{ opacity: 1, x: 0 },
+              transition:{ duration: 0.5 },
+              className:"space-y-6"
+            }}
           >
             <div className={`flex items-center space-x-3 p-4 rounded-lg ${techCategories?.[activeCategory]?.bgColor}`}>
               <Icon 
@@ -210,13 +213,15 @@ CMD ["npm", "start"]`
             <div className="space-y-4">
               {techCategories?.[activeCategory]?.technologies?.map((tech, index) => (
                 <motion.div
-                  key={tech?.name}
-                  initial={{ opacity: 0, y: 20 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.4, delay: index * 0.1 }}
-                  onMouseEnter={() => setHoveredTech(tech?.name)}
-                  onMouseLeave={() => setHoveredTech(null)}
-                  className="bg-card border border-border rounded-lg p-4 hover:shadow-soft transition-all duration-200 cursor-pointer"
+                  {...{
+                    key:tech?.name,
+                    initial:{ opacity: 0, y: 20 },
+                    animate:{ opacity: 1, y: 0 },
+                    transition:{ duration: 0.4, delay: index * 0.1 },
+                    onMouseEnter:() => setHoveredTech(tech?.name),
+                    onMouseLeave:() => setHoveredTech(null),
+                    className: "bg-card border border-border rounded-lg p-4 hover:shadow-soft transition-all duration-200 cursor-pointer"
+                  }}
                 >
                   <div className="flex items-center justify-between mb-3">
                     <div className="flex items-center space-x-3">
@@ -231,12 +236,14 @@ CMD ["npm", "start"]`
                   
                   <div className="w-full bg-muted rounded-full h-2">
                     <motion.div
-                      initial={{ width: 0 }}
-                      animate={{ width: `${tech?.level}%` }}
-                      transition={{ duration: 1, delay: index * 0.1, ease: "easeOut" }}
-                      className={`h-2 rounded-full bg-gradient-to-r from-primary to-secondary ${
-                        hoveredTech === tech?.name ? 'shadow-soft' : ''
-                      }`}
+                      {...{
+                        initial:{ width: 0 },
+                        animate:{ width: `${tech?.level}%` },
+                        transition:{ duration: 1, delay: index * 0.1, ease: "easeOut" },
+                        className:`h-2 rounded-full bg-gradient-to-r from-primary to-secondary ${
+                          hoveredTech === tech?.name ? 'shadow-soft' : ''
+                        }`
+                      }}
                     />
                   </div>
                 </motion.div>
@@ -246,11 +253,13 @@ CMD ["npm", "start"]`
 
           {/* Code Example */}
           <motion.div
-            key={`code-${activeCategory}`}
-            initial={{ opacity: 0, x: 20 }}
-            animate={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.5 }}
-            className="bg-card border border-border rounded-lg overflow-hidden shadow-soft"
+            {...{
+              key:`code-${activeCategory}`,
+              initial:{ opacity: 0, x: 20 },
+              animate:{ opacity: 1, x: 0 },
+              transition:{ duration: 0.5 },
+              className:"bg-card border border-border rounded-lg overflow-hidden shadow-soft"
+            }}
           >
             {/* Terminal Header */}
             <div className="flex items-center space-x-2 px-4 py-3 bg-muted border-b border-border">
@@ -273,23 +282,25 @@ CMD ["npm", "start"]`
 
         {/* Bottom Stats */}
         <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6, delay: 0.4 }}
-          viewport={{ once: true }}
-          className="grid grid-cols-2 md:grid-cols-4 gap-6 mt-16 pt-16 border-t border-border"
+          {...{
+            initial:{ opacity: 0, y: 20 },
+            whileInView:{ opacity: 1, y: 0 },
+            transition:{ duration: 0.6, delay: 0.4 },
+            viewport:{ once: true },
+            className:"grid grid-cols-2 md:grid-cols-4 gap-6 mt-16 pt-16 border-t border-border"
+          }}
         >
           <div className="text-center">
-            <div className="text-3xl font-bold text-primary mb-2">20+</div>
-            <div className="text-sm text-muted-foreground">Technologies Mastered</div>
+            <div className="text-3xl font-bold text-primary mb-2">5+</div>
+            <div className="text-sm text-muted-foreground">Technologies maîtrisées</div>
           </div>
           <div className="text-center">
-            <div className="text-3xl font-bold text-secondary mb-2">15+</div>
-            <div className="text-sm text-muted-foreground">Projects Completed</div>
+            <div className="text-3xl font-bold text-secondary mb-2">10+</div>
+            <div className="text-sm text-muted-foreground">Projets terminés</div>
           </div>
           <div className="text-center">
-            <div className="text-3xl font-bold text-accent mb-2">3+</div>
-            <div className="text-sm text-muted-foreground">Years Experience</div>
+            <div className="text-3xl font-bold text-accent mb-2">1+</div>
+            <div className="text-sm text-muted-foreground">Années d'expérience</div>
           </div>
           <div className="text-center">
             <div className="text-3xl font-bold text-github-green mb-2">500+</div>
