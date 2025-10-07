@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import Icon from '../../../components/AppIcon';
+import Icon, { type IconName } from '../../../components/AppIcon';
 
 export interface TimelineItem {
   year: number;
@@ -34,11 +34,11 @@ const TechnologyTimeline: React.FC<TechnologyTimelineProps> = ({ timelineData })
     }
   };
 
-  const getTypeIcon = (type: TimelineItem['type']): string => {
+  const getTypeIcon = (type: TimelineItem['type']): IconName => {
     switch (type) {
       case 'learned': return 'BookOpen';
       case 'mastered': return 'Trophy';
-      case 'project': return 'Code';
+      case 'project': return 'Code2';
       case 'certification': return 'Award';
       default: return 'Circle';
     }

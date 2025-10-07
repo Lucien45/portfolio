@@ -1,4 +1,3 @@
-/* eslint-disable @typescript-eslint/no-unused-vars */
 import { useState } from 'react';
 import Icon, { type IconName } from '../../../components/AppIcon';
 import Button from '../../../components/ui/Button';
@@ -153,23 +152,23 @@ const ProjectEstimator = () => {
     }));
   };
 
-  const handlePlatformToggle = (platformId: string) => {
-    setProjectData(prev => ({
-      ...prev,
-      platforms: prev.platforms.includes(platformId)
-        ? prev.platforms.filter(p => p !== platformId)
-        : [...prev.platforms, platformId]
-    }));
-  };
+  // const handlePlatformToggle = (platformId: string) => {
+  //   setProjectData(prev => ({
+  //     ...prev,
+  //     platforms: prev.platforms.includes(platformId)
+  //       ? prev.platforms.filter(p => p !== platformId)
+  //       : [...prev.platforms, platformId]
+  //   }));
+  // };
 
-  const handleIntegrationToggle = (integrationId: string) => {
-    setProjectData(prev => ({
-      ...prev,
-      integrations: prev.integrations.includes(integrationId)
-        ? prev.integrations.filter(i => i !== integrationId)
-        : [...prev.integrations, integrationId]
-    }));
-  };
+  // const handleIntegrationToggle = (integrationId: string) => {
+  //   setProjectData(prev => ({
+  //     ...prev,
+  //     integrations: prev.integrations.includes(integrationId)
+  //       ? prev.integrations.filter(i => i !== integrationId)
+  //       : [...prev.integrations, integrationId]
+  //   }));
+  // };
 
   const calculateEstimation = async () => {
     if (!projectData?.projectType || !projectData?.timeline) return;
