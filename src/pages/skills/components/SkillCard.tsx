@@ -1,18 +1,9 @@
 import { useState } from 'react';
-import Icon, { type IconName } from '../../../components/AppIcon';
+import Icon from '../../../components/AppIcon';
+import type { Skill } from '../types';
 
 type Proficiency = 'Expert' | 'Advanced' | 'Intermediate' | 'Beginner' | string;
 
-type Skill = {
-  name: string;
-  category: string;
-  description: string;
-  proficiency: Proficiency;
-  experience?: string;
-  projects?: number;
-  icon: IconName;
-  bgColor: string;
-};
 
 interface SkillCardProps {
   skill: Skill;
