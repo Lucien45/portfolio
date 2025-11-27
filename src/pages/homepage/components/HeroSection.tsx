@@ -226,7 +226,7 @@ const HeroSection = () => {
                 {/* Profile Image */}
                 <div className="relative z-10 p-2">
                   <AppImage
-                    src="/photo_cv.png"
+                    src="/photo_a_jour_resize.jpg"
                     alt="Lucien Rafaralahy - Full-Stack Developer"
                     className="w-full h-full rounded-full object-cover"
                   />
