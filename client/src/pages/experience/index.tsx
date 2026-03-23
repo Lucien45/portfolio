@@ -70,10 +70,10 @@ const Experience = () => {
         <section className="py-16 px-4 sm:px-6 lg:px-8 bg-muted/30">
           <div className="max-w-6xl mx-auto">
             <div className="text-center mb-12">
-              <h2 className="text-3xl font-bold text-foreground mb-4">Professional Timeline</h2>
+              <h2 className="text-3xl font-bold text-foreground mb-4">Chronologie professionnelle</h2>
               <p className="text-muted-foreground max-w-2xl mx-auto">
-                A comprehensive journey through internships, freelance projects, and community contributions 
-                that demonstrate growth-minded development and technical competence.
+              Un parcours complet à travers des stages, des projets indépendants et des contributions communautaires
+              qui témoigne d'un développement axé sur la croissance et de compétences techniques.
               </p>
             </div>
             <ExperienceTimeline />
