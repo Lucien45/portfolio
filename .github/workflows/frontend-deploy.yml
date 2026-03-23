@@ -5,7 +5,7 @@ on:
     branches:
       - main
     paths:
-      - 'client/*'
+      - 'client/**'
   workflow_dispatch:
 
 jobs:
@@ -36,8 +36,8 @@ jobs:
         username: ${{ secrets.VPS_USER }}
         key: ${{ secrets.VPS_SSH_KEY }}
         port: 22
-        source: "client/"
-        target: "/home/ubuntu/deploiment/portfolio/client/"
+        source: "client/build/"
+        target: "/home/ubuntu/deploiment/portfolio/client/build/"
 
     - name: SSH & Deploy Docker Compose
       uses: appleboy/ssh-action@v0.1.5

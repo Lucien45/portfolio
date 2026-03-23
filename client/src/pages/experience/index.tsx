@@ -31,16 +31,16 @@ const Experience = () => {
             <div className="text-center mb-16">
               <div className="inline-flex items-center px-4 py-2 bg-primary/10 text-primary rounded-full text-sm font-medium mb-6">
                 <Icon name="Briefcase" size={16} className="mr-2" />
-                Professional Journey
+                Parcours professionnel
               </div>
               <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-foreground mb-6">
-                Professional
+                Professionnel
                 <span className="block text-primary">Experience</span>
               </h1>
               <p className="text-xl text-muted-foreground max-w-3xl mx-auto leading-relaxed">
-                Detailed case studies of internship and freelance work with measurable outcomes, 
-                showcasing professional growth from traditional computer science foundations to 
-                modern web technologies expertise.
+              Études de cas détaillées de stages et de missions freelance avec des résultats mesurables,
+              illustrant la progression professionnelle, des fondements traditionnels de l'informatique à 
+              l'expertise en technologies web modernes.
               </p>
               
               {/* Quick Stats */}
