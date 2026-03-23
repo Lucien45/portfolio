@@ -47,19 +47,19 @@ const Experience = () => {
               <div className="grid grid-cols-2 md:grid-cols-4 gap-6 mt-12 max-w-4xl mx-auto">
                 <div className="text-center">
                   <div className="text-3xl font-bold text-primary mb-2">15+</div>
-                  <div className="text-sm text-muted-foreground">Projects Completed</div>
+                  <div className="text-sm text-muted-foreground">Projets terminés</div>
                 </div>
                 <div className="text-center">
                   <div className="text-3xl font-bold text-secondary mb-2">8</div>
-                  <div className="text-sm text-muted-foreground">Satisfied Clients</div>
+                  <div className="text-sm text-muted-foreground">Clients satisfaits</div>
                 </div>
                 <div className="text-center">
                   <div className="text-3xl font-bold text-success mb-2">15K+</div>
-                  <div className="text-sm text-muted-foreground">Users Impacted</div>
+                  <div className="text-sm text-muted-foreground">Utilisateurs concernés</div>
                 </div>
                 <div className="text-center">
                   <div className="text-3xl font-bold text-accent mb-2">94%</div>
-                  <div className="text-sm text-muted-foreground">Client Satisfaction</div>
+                  <div className="text-sm text-muted-foreground">Satisfaction des clients</div>
                 </div>
               </div>
             </div>
