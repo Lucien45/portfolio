@@ -6,5 +6,5 @@ services:
       context: ./client/
     container_name: portfolio_client
     ports:
-      - "80:80"
+      - "4028:80"
     restart: always
