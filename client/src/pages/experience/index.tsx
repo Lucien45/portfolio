@@ -6,9 +6,10 @@ import MetricsDashboard from './components/MetricsDashboard';
 import LinkedInIntegration from './components/LinkedInIntegration';
 import Icon from '../../components/AppIcon';
 import Button from '../../components/ui/Button';
+import Footer from '../../components/ui/Footer';
 
 const Experience = () => {
-  const currentYear = new Date()?.getFullYear();
+  // const currentYear = new Date()?.getFullYear();
 
   return (
     <>
@@ -177,7 +178,7 @@ const Experience = () => {
         </section>
 
         {/* Call to Action Section */}
-        <section className="py-16 px-4 sm:px-6 lg:px-8 bg-foreground text-background">
+        <section className="py-16 px-4 sm:px-6 lg:px-8 ">
           <div className="max-w-4xl mx-auto text-center">
             <h2 className="text-3xl font-bold mb-4">Ready for Your Next Challenge</h2>
             <p className="text-lg opacity-90 mb-8 max-w-2xl mx-auto">
@@ -199,7 +200,6 @@ const Experience = () => {
                 size="lg"
                 iconName="Download"
                 iconPosition="left"
-                className="border-background/20 text-background hover:bg-background/10"
               >
                 Download Resume
               </Button>
@@ -208,7 +208,7 @@ const Experience = () => {
         </section>
 
         {/* Footer */}
-        <footer className="py-8 px-4 sm:px-6 lg:px-8 border-t border-border">
+        {/* <footer className="py-8 px-4 sm:px-6 lg:px-8 border-t border-border">
           <div className="max-w-7xl mx-auto">
             <div className="flex flex-col md:flex-row items-center justify-between">
               <div className="flex items-center space-x-2 mb-4 md:mb-0">
@@ -222,7 +222,8 @@ const Experience = () => {
               </div>
             </div>
           </div>
-        </footer>
+        </footer> */}
+        <Footer/>
       </div>
     </>
   );
