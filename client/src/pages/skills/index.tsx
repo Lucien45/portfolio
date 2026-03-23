@@ -11,6 +11,7 @@ import TechnologyTimeline from './components/TechnologyTimeline';
 import StickySkillsBar from './components/StickySkillsBar';
 import type { TimelineItem } from './components/TechnologyTimeline';
 import type { Skill, Certification } from './types';
+import Footer from '../../components/ui/Footer';
 
 
 const Skills: React.FC = () => {
@@ -313,12 +314,12 @@ const Skills: React.FC = () => {
               <div className="flex items-center justify-center space-x-2 mb-4">
                 <Icon name="Zap" size={32} className="text-primary" />
                 <h1 className="text-4xl md:text-5xl font-bold text-foreground">
-                  Skills Laboratory
+                  Laboratoire de compétences
                 </h1>
               </div>
               <p className="text-xl text-muted-foreground max-w-3xl mx-auto mb-8">
-                Interactive demonstrations of technical capabilities with hands-on code examples, 
-                certifications, and continuous learning journey through modern web technologies.
+              Démonstrations interactives des capacités techniques avec des exemples de code pratiques,
+              certifications et parcours d'apprentissage continu à travers les technologies web modernes.
               </p>
               
               <div className="flex flex-wrap justify-center gap-4 mb-8">
@@ -332,7 +333,7 @@ const Skills: React.FC = () => {
                 </div>
                 <div className="flex items-center space-x-2 bg-card border border-border rounded-lg px-4 py-2">
                   <Icon name="TrendingUp" size={20} className="text-accent" />
-                  <span className="font-medium text-foreground">4+ Years Experience</span>
+                  <span className="font-medium text-foreground">4+ Années d'expérience</span>
                 </div>
               </div>
 
@@ -344,7 +345,7 @@ const Skills: React.FC = () => {
                   iconPosition="left"
                   onClick={() => document.getElementById('interactive-demos')?.scrollIntoView({ behavior: 'smooth' })}
                 >
-                  Try Interactive Demos
+                  Essayez les démos interactives
                 </Button>
                 <Button
                   variant="outline"
@@ -353,7 +354,7 @@ const Skills: React.FC = () => {
                   iconPosition="left"
                   onClick={() => window.open('/assets/Lucien_Skills_Matrix.pdf', '_blank')}
                 >
-                  Download Skills Matrix
+                  Télécharger la matrice de compétences
                 </Button>
               </div>
             </div>
@@ -364,7 +365,7 @@ const Skills: React.FC = () => {
         <section className="py-16 px-4 sm:px-6 lg:px-8">
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-12">
-              <h2 className="text-3xl font-bold text-foreground mb-4">Technical Competency Matrix</h2>
+              <h2 className="text-3xl font-bold text-foreground mb-4">Matrice des compétences techniques</h2>
               <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
                 Comprehensive overview of technical skills with proficiency levels, experience duration, and project applications.
               </p>
@@ -541,6 +542,9 @@ const Skills: React.FC = () => {
           </div>
         </div>
       )}
+
+      {/* Footer */}
+      <Footer/>
     </div>
   );
 };

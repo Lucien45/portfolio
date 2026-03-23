@@ -13,7 +13,7 @@ const Experience = () => {
   return (
     <>
       <Helmet>
-        <title>Professional Experience - Lucien Portfolio</title>
+        <title>Expérience Professionnelle - Lucien Portfolio</title>
         <meta name="description" content="Detailed case studies of Lucien's internship and freelance work with measurable outcomes. Professional references and testimonials from supervisors, clients, and colleagues." />
         <meta name="keywords" content="professional experience, internship, freelance, web developer, Madagascar, MESUPRES, FC FOUDRE, testimonials" />
         <meta property="og:title" content="Professional Experience - Lucien Portfolio" />
