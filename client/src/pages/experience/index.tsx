@@ -93,8 +93,8 @@ const Experience = () => {
             <div className="text-center mb-12">
               <h2 className="text-3xl font-bold text-foreground mb-4">Professional References</h2>
               <p className="text-muted-foreground max-w-2xl mx-auto">
-                Verified testimonials from supervisors, clients, and colleagues highlighting 
-                technical expertise, professional maturity, and collaborative spirit.
+              Témoignages vérifiés de superviseurs, de clients et de collègues soulignant
+              son expertise technique, sa maturité professionnelle et son esprit de collaboration.
               </p>
             </div>
             <TestimonialCarousel />
