@@ -367,7 +367,7 @@ const Skills: React.FC = () => {
             <div className="text-center mb-12">
               <h2 className="text-3xl font-bold text-foreground mb-4">Matrice des compétences techniques</h2>
               <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-                Comprehensive overview of technical skills with proficiency levels, experience duration, and project applications.
+              Aperçu complet des compétences techniques, incluant les niveaux de maîtrise, la durée de l'expérience et les applications aux projets.
               </p>
             </div>
 
@@ -381,7 +381,7 @@ const Skills: React.FC = () => {
             <div className="text-center mb-12">
               <h2 className="text-3xl font-bold text-foreground mb-4">Interactive Skill Showcase</h2>
               <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-                Click on any skill card to explore interactive demonstrations and code examples.
+              Cliquez sur n'importe quelle fiche de compétence pour explorer des démonstrations interactives et des exemples de code.
               </p>
             </div>
 
@@ -403,7 +403,7 @@ const Skills: React.FC = () => {
             <div className="text-center mb-12">
               <h2 className="text-3xl font-bold text-foreground mb-4">Live Code Demonstrations</h2>
               <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-                Interactive code sandboxes showcasing real-world implementations and best practices.
+              Des environnements de test de code interactifs présentant des implémentations concrètes et des bonnes pratiques.
               </p>
             </div>
 
