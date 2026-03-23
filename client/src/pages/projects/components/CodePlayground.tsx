@@ -397,9 +397,9 @@ const CodePlayground: React.FC = () => {
             size="sm"
             iconName="Github"
             iconPosition="left"
-            onClick={() => window.open('https://github.com/lucienrazafy', '_blank')}
+            onClick={() => window.open('https://github.com/Lucien45', '_blank')}
           >
-            View on GitHub
+            Voir sur GitHub
           </Button>
           <Button
             variant="default"
@@ -407,7 +407,7 @@ const CodePlayground: React.FC = () => {
             iconName="Play"
             iconPosition="left"
           >
-            Run Code
+            Exécuter le code
           </Button>
         </div>
       </div>

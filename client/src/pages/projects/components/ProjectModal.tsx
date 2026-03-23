@@ -178,13 +178,13 @@ const ProjectModal: React.FC<ProjectModalProps> = ({ project, isOpen, onClose })
 
                       {/* Description */}
                       <div>
-                        <h3 className="text-lg font-semibold text-foreground mb-3">Project Description</h3>
+                        <h3 className="text-lg font-semibold text-foreground mb-3">Description du projet</h3>
                         <p className="text-muted-foreground leading-relaxed">{project?.fullDescription}</p>
                       </div>
 
                       {/* Key Features */}
                       <div>
-                        <h3 className="text-lg font-semibold text-foreground mb-3">Key Features</h3>
+                        <h3 className="text-lg font-semibold text-foreground mb-3">Principales fonctionnalités</h3>
                         <div className="grid grid-cols-1 md:grid-cols-2 gap-3">
                           {project?.features?.map((feature, index) => (
                             <div key={index} className="flex items-start space-x-3 p-3 bg-muted/50 rounded-lg">
@@ -197,7 +197,7 @@ const ProjectModal: React.FC<ProjectModalProps> = ({ project, isOpen, onClose })
 
                       {/* Technologies Used */}
                       <div>
-                        <h3 className="text-lg font-semibold text-foreground mb-3">Technologies Used</h3>
+                        <h3 className="text-lg font-semibold text-foreground mb-3">Technologies utilisées</h3>
                         <div className="flex flex-wrap gap-2">
                           {project?.technologies?.map((tech, index) => (
                             <span
@@ -217,7 +217,7 @@ const ProjectModal: React.FC<ProjectModalProps> = ({ project, isOpen, onClose })
                     <div className="space-y-6">
                       {/* Architecture */}
                       <div>
-                        <h3 className="text-lg font-semibold text-foreground mb-3">Architecture Overview</h3>
+                        <h3 className="text-lg font-semibold text-foreground mb-3">Présentation de l'architecture</h3>
                         <div className="bg-muted/50 rounded-lg p-4">
                           <pre className="text-sm text-foreground font-mono overflow-x-auto">
                             {project?.architecture || `Frontend: React + TypeScript
@@ -232,7 +232,7 @@ const ProjectModal: React.FC<ProjectModalProps> = ({ project, isOpen, onClose })
 
                       {/* Code Snippets */}
                       <div>
-                        <h3 className="text-lg font-semibold text-foreground mb-3">Code Highlights</h3>
+                        <h3 className="text-lg font-semibold text-foreground mb-3">Points saillants du code</h3>
                         <div className="space-y-4">
                           {project?.codeSnippets?.map((snippet, index) => (
                             <div key={index} className="bg-gray-900 rounded-lg overflow-hidden">

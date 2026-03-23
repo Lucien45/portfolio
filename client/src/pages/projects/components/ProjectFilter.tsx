@@ -41,9 +41,9 @@ const ProjectFilter: React.FC<ProjectFilterProps> = ({
       {/* Header */}
       <div className="flex items-center justify-between mb-6">
         <div>
-          <h3 className="text-lg font-semibold text-foreground mb-1">Filter Projects</h3>
+          <h3 className="text-lg font-semibold text-foreground mb-1">Filtrer les projets</h3>
           <p className="text-sm text-muted-foreground">
-            Showing {projectCount} project{projectCount !== 1 ? 's' : ''}
+            Affichage {projectCount} project{projectCount !== 1 ? 's' : ''}
           </p>
         </div>
         {hasActiveFilters && (
@@ -54,7 +54,7 @@ const ProjectFilter: React.FC<ProjectFilterProps> = ({
             iconName="X"
             iconPosition="left"
           >
-            Clear Filters
+            Effacer les filtres
           </Button>
         )}
       </div>
@@ -62,7 +62,7 @@ const ProjectFilter: React.FC<ProjectFilterProps> = ({
       <div className="mb-6">
         <h4 className="text-sm font-medium text-foreground mb-3 flex items-center">
           <Icon name="FolderOpen" size={16} className="mr-2" />
-          Project Type
+          Type de projet
         </h4>
         <div className="flex flex-wrap gap-2">
           {categories?.map((category) => (
@@ -128,7 +128,7 @@ const ProjectFilter: React.FC<ProjectFilterProps> = ({
         <div className="mt-6 pt-4 border-t border-border">
           <div className="flex items-center space-x-2 text-sm text-muted-foreground">
             <Icon name="Filter" size={14} />
-            <span>Active filters:</span>
+            <span>Filtres actifs:</span>
             {selectedCategory !== 'all' && (
               <span className="px-2 py-1 bg-primary/10 text-primary rounded text-xs">
                 {categories?.find(c => c?.id === selectedCategory)?.name}

@@ -11,6 +11,7 @@ import ProjectModal from './components/ProjectModal';
 import GitHubStats from './components/GitHubStats';
 import CodePlayground from './components/CodePlayground';
 import type { Category } from './type';
+import Footer from '../../components/ui/Footer';
 
 export interface Project {
   id: number;
@@ -66,7 +67,7 @@ const Projects = () => {
       status: "completed",
       year: "2024",
       demoUrl: "https://mesupres-demo.vercel.app",
-      githubUrl: "https://github.com/lucienrazafy/mesupres-registry",
+      githubUrl: "https://github.com/Lucien45/consultation",
       metrics: [
         { label: "Active Users", value: "500+" },
         { label: "Student Records", value: "2,000+" },
@@ -151,8 +152,8 @@ const StudentRegistration: React.FC = () => {
       type: "Website",
       status: "completed",
       year: "2024",
-      demoUrl: "https://fc-foudre.netlify.app",
-      githubUrl: "https://github.com/lucienrazafy/fc-foudre-website",
+      demoUrl: "https://fcfoudre.com/",
+      githubUrl: "https://github.com/Lucien45",
       metrics: [
         { label: "Monthly Visitors", value: "1,200+" },
         { label: "Match Records", value: "150+" },
@@ -187,7 +188,7 @@ const StudentRegistration: React.FC = () => {
       status: "completed",
       year: "2024",
       demoUrl: "https://lucienrazafy.dev",
-      githubUrl: "https://github.com/lucienrazafy/portfolio-v2",
+      githubUrl: "https://github.com/Lucien45",
       metrics: [
         { label: "Performance Score", value: "98%" },
         { label: "Accessibility", value: "100%" },
@@ -216,7 +217,7 @@ const StudentRegistration: React.FC = () => {
       type: "Component Library",
       status: "in-progress",
       year: "2024",
-      githubUrl: "https://github.com/lucienrazafy/react-components-library",
+      githubUrl: "https://github.com/Lucien45",
       metrics: [
         { label: "Components", value: "45+" },
         { label: "Test Coverage", value: "92%" },
@@ -245,7 +246,7 @@ const StudentRegistration: React.FC = () => {
       type: "Backend API",
       status: "completed",
       year: "2024",
-      githubUrl: "https://github.com/lucienrazafy/task-management-api",
+      githubUrl: "https://github.com/Lucien45",
       metrics: [
         { label: "API Endpoints", value: "25+" },
         { label: "Response Time", value: "<100ms" },
@@ -274,7 +275,7 @@ const StudentRegistration: React.FC = () => {
       type: "Dashboard",
       status: "in-progress",
       year: "2024",
-      githubUrl: "https://github.com/lucienrazafy/data-viz-dashboard",
+      githubUrl: "https://github.com/Lucien45",
       metrics: [
         { label: "Data Points", value: "1M+" },
         { label: "Chart Types", value: "15+" },
@@ -295,8 +296,8 @@ const StudentRegistration: React.FC = () => {
 
   // Categories for filtering
   const categories: Category[] = [
-    { id: 'all', name: 'All Projects', icon: 'Grid3x3', count: projects?.length },
-    { id: 'web', name: 'Web Applications', icon: 'Globe', count: projects?.filter(p => p?.category === 'web')?.length },
+    { id: 'all', name: 'Tous les projets', icon: 'Grid3x3', count: projects?.length },
+    { id: 'web', name: 'Applications Web', icon: 'Globe', count: projects?.filter(p => p?.category === 'web')?.length },
     { id: 'api', name: 'Backend APIs', icon: 'Server', count: projects?.filter(p => p?.category === 'api')?.length },
     { id: 'library', name: 'Libraries', icon: 'Package', count: projects?.filter(p => p?.category === 'library')?.length }
   ];
@@ -359,8 +360,8 @@ const StudentRegistration: React.FC = () => {
   return (
     <div className="min-h-screen bg-background">
       <Helmet>
-        <title>Projects - Lucien Razafy | Full-Stack Developer Portfolio</title>
-        <meta name="description" content="Explore my technical projects including MESUPRES registry system, FC FOUDRE website, and other full-stack applications built with React, TypeScript, and modern web technologies." />
+        <title>Projets - RAFARALAHY Savaka Lucien | Portfolio de développeur Full-Stack</title>
+        <meta name="description" content="Découvrez mes projets techniques, notamment le système d'enregistrement MESUPRES, le site web FC FOUDRE et d'autres applications full-stack développées avec React, TypeScript et les technologies web modernes." />
         <meta name="keywords" content="React projects, TypeScript, full-stack development, web applications, Madagascar developer, portfolio projects" />
       </Helmet>
       <Header />
@@ -375,22 +376,22 @@ const StudentRegistration: React.FC = () => {
                 // className="text-center mb-12"
               >
                 <h1 className="text-4xl md:text-5xl font-bold text-foreground mb-4">
-                  Technical Projects
+                  Projets techniques 
                 </h1>
                 <p className="text-xl text-muted-foreground max-w-3xl mx-auto mb-8">
-                  Interactive showcase of full-stack applications, featuring live demos, code samples, 
-                  and detailed case studies of real-world projects built with modern technologies.
+                Présentation interactive d'applications full-stack, avec des démonstrations en direct, des exemples de code,
+                et des études de cas détaillées de projets réels construits avec des technologies modernes.
                 </p>
                 
                 {/* Quick Stats */}
                 <div className="grid grid-cols-2 md:grid-cols-4 gap-6 max-w-2xl mx-auto">
                   <div className="text-center">
                     <div className="text-2xl font-bold text-primary">{projects?.length}</div>
-                    <div className="text-sm text-muted-foreground">Total Projects</div>
+                    <div className="text-sm text-muted-foreground">Total des projets</div>
                   </div>
                   <div className="text-center">
                     <div className="text-2xl font-bold text-secondary">{projects?.filter(p => p?.status === 'completed')?.length}</div>
-                    <div className="text-sm text-muted-foreground">Completed</div>
+                    <div className="text-sm text-muted-foreground">Complété</div>
                   </div>
                   <div className="text-center">
                     <div className="text-2xl font-bold text-accent">15+</div>
@@ -398,7 +399,7 @@ const StudentRegistration: React.FC = () => {
                   </div>
                   <div className="text-center">
                     <div className="text-2xl font-bold text-success">3K+</div>
-                    <div className="text-sm text-muted-foreground">Lines of Code</div>
+                    <div className="text-sm text-muted-foreground">Lignes de code</div>
                   </div>
                 </div>
               </motion.div>
@@ -417,7 +418,7 @@ const StudentRegistration: React.FC = () => {
 
                 {/* View Mode Toggle */}
                 <div className="bg-card border border-border rounded-xl p-4">
-                  <h3 className="text-sm font-medium text-foreground mb-3">View Mode</h3>
+                  <h3 className="text-sm font-medium text-foreground mb-3">Mode d'affichage</h3>
                   <div className="flex space-x-2">
                     <Button
                       variant={viewMode === 'grid' ? 'default' : 'outline'}
@@ -477,7 +478,7 @@ const StudentRegistration: React.FC = () => {
                             <Icon name="Search" size={48} className="text-muted-foreground mx-auto mb-4" />
                             <h3 className="text-lg font-semibold text-foreground mb-2">No projects found</h3>
                             <p className="text-muted-foreground mb-4">
-                            Try adjusting your filters to see more projects.
+                            Essayez de modifier vos filtres pour voir plus de projets.
                             </p>
                             <Button
                             variant="outline"
@@ -507,11 +508,11 @@ const StudentRegistration: React.FC = () => {
               viewport={{ once: true }}
             >
               <h2 className="text-3xl font-bold text-foreground mb-4">
-                Ready to Start Your Project?
+                Prêt à démarrer votre projet ?
               </h2>
               <p className="text-lg text-muted-foreground mb-8">
-                Let's collaborate on your next web application or discuss how these technologies 
-                can solve your business challenges.
+                Collaborons sur votre prochaine application web ou discutons de la manière dont ces technologies 
+                peuvent résoudre vos défis commerciaux.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <Button
@@ -521,28 +522,32 @@ const StudentRegistration: React.FC = () => {
                   iconPosition="left"
                   onClick={() => window.location.href = '/contact'}
                 >
-                  Start a Conversation
+                  Entamer une conversation
                 </Button>
                 <Button
                   variant="outline"
                   size="lg"
                   iconName="Github"
                   iconPosition="left"
-                  onClick={() => window.open('https://github.com/lucienrazafy', '_blank')}
+                  onClick={() => window.open('https://github.com/Lucien45', '_blank')}
                 >
-                  View All Code
+                  Afficher tout le code
                 </Button>
               </div>
             </motion.div>
           </div>
         </section>
       </main>
+
       {/* Project Modal */}
       <ProjectModal
         project={selectedProject}
         isOpen={isModalOpen}
         onClose={() => setIsModalOpen(false)}
       />
+
+      {/* Footer */}
+      <Footer/>
     </div>
   );
 };
