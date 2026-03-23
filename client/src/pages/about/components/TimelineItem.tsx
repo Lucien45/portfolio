@@ -4,7 +4,7 @@ import Button from '../../../components/ui/Button';
 import type { IconName } from '../../projects/type';
 
 export interface TimelineItemData {
-  type: 'education' | 'certification' | 'internship' | 'project' | string;
+  type: 'education' | 'certification' | 'stage' | 'project' | string;
   period: string;
   title: string;
   organization: string;
@@ -38,6 +38,8 @@ const TimelineItem: React.FC<TimelineItemProps> = ({
         return 'Award';
       case 'internship':
         return 'Briefcase';
+      case 'stage':
+        return 'Briefcase';
       case 'project':
         return 'Code';
       default:
@@ -52,6 +54,8 @@ const TimelineItem: React.FC<TimelineItemProps> = ({
       case 'certification':
         return 'bg-amber-500';
       case 'internship':
+        return 'bg-green-500';
+      case 'stage':
         return 'bg-green-500';
       case 'project':
         return 'bg-purple-500';

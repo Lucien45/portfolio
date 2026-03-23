@@ -17,36 +17,50 @@ const JourneyTimeline: React.FC = () => {
   const timelineData: TimelineItemData[]  = [
     {
       type: 'education',
-      period: '2019 - 2024',
-      title: 'MIAGE - Méthodes Informatiques Appliquées à la Gestion des Entreprises',
-      organization: 'ESMIA (École Supérieure de Management et d\'Innovation d\'Antananarivo)',
+      period: '2023 - 2024',
+      title: 'Master 1 MIAGE - Méthodes Informatiques Appliquées à la Gestion des Entreprises',
+      organization: 'ESMIA (École Supérieure de Management et d\'Informatique Appliquée d\'Antananarivo)',
       location: 'Antananarivo, Madagascar',
-      summary: 'Comprehensive 5-year program combining computer science fundamentals with business management, specializing in enterprise software development and digital transformation.',
-      details: `The MIAGE program at ESMIA provided a unique dual competency in both computer science and business management. This interdisciplinary approach equipped me with:\n\n• Strong foundation in software engineering principles and methodologies\n• Enterprise architecture and system integration expertise\n• Business process analysis and digital transformation strategies\n• Project management and team leadership skills\n• Database design and management systems\n• Web development technologies and frameworks\n\nThe program emphasized practical application through real-world projects, internships, and collaboration with local businesses, preparing graduates to bridge the gap between technical teams and business stakeholders.`,
+      summary: 'Programme de master 1 combinant les fondamentaux de l\'informatique et la gestion d\'entreprise, avec une spécialisation en développement de logiciels d\'entreprise et en transformation numérique.',
+      details: `Le programme MIAGE de l'ESMIA offrait une double compétence unique en informatique et en gestion d'entreprise. Cette approche interdisciplinaire m'a permis d'acquérir :\n\n• De solides bases en génie logiciel (principes et méthodologies)\n• Une expertise en architecture d'entreprise et intégration de systèmes\n• Des compétences en analyse des processus métier et en stratégies de transformation numérique\n• Des compétences en gestion de projet et en leadership d'équipe\n• Des compétences en conception et gestion de bases de données\n• Une expertise en technologies et frameworks de développement web\n\nLe programme mettait l'accent sur la pratique à travers des projets concrets, des stages et des collaborations avec des entreprises locales, préparant ainsi les diplômés à faire le lien entre les équipes techniques et les parties prenantes commerciales.`,
       skills: ['Java', 'SQL', 'UML', 'Project Management', 'Business Analysis', 'System Design'],
       achievements: [
-        'Graduated with distinction in software engineering track',
-        'Led multiple team projects with cross-functional collaboration',
-        'Developed enterprise-level applications during coursework',
-        'Completed thesis on digital transformation in Madagascar businesses'
+        'Diplômé avec distinction en génie logiciel',
+        'J\'ai dirigé plusieurs projets d\'équipe avec une collaboration interfonctionnelle.',
+        'Développement d\'applications d\'entreprise dans le cadre de mes études'
       ]
     },
     {
-      type: 'internship',
+      type: 'education',
+      period: '2021 - 2023',
+      title: 'Licence IRD - Informatique, Risques et Decisions',
+      organization: 'ESMIA (École Supérieure de Management et d\'Informatique Appliquée d\'Antananarivo)',
+      location: 'Antananarivo, Madagascar',
+      summary: 'Programme de licence en informatique, risques et décisions, avec une spécialisation en développement de logiciels d\'entreprise et en transformation numérique.',
+      details: `Le programme MIAGE de l'ESMIA offrait une double compétence unique en informatique et en gestion d'entreprise. Cette approche interdisciplinaire m'a permis d'acquérir :\n\n• De solides bases en génie logiciel (principes et méthodologies)\n• Une expertise en architecture d'entreprise et intégration de systèmes\n• Des compétences en analyse des processus métier et en stratégies de transformation numérique\n• Des compétences en gestion de projet et en leadership d'équipe\n• Des compétences en conception et gestion de bases de données\n• Une expertise en technologies et frameworks de développement web\n\nLe programme mettait l'accent sur la pratique à travers des projets concrets, des stages et des collaborations avec des entreprises locales, préparant ainsi les diplômés à faire le lien entre les équipes techniques et les parties prenantes commerciales.`,
+      skills: ['Java', 'SQL', 'UML', 'Project Management', 'Business Analysis', 'System Design'],
+      achievements: [
+        'Diplômé avec distinction en génie logiciel',
+        'J\'ai dirigé plusieurs projets d\'équipe avec une collaboration interfonctionnelle.',
+        'Développement d\'applications d\'entreprise dans le cadre de mes études'
+      ]
+    },
+    {
+      type: 'stage',
       period: 'Jun 2023 - Aug 2023',
-      title: 'Full Stack Development Intern',
+      title: 'Full Stack Development - Stage',
       organization: 'MESUPRES (Ministère de l\'Enseignement Supérieur et de la Recherche Scientifique)',
       location: 'Antananarivo, Madagascar',
-      summary: 'Developed a comprehensive student registry system for higher education institutions across Madagascar, handling thousands of student records and academic data.',
-      details: `During my internship at MESUPRES, I was responsible for designing and developing a critical student registry system that would serve multiple universities across Madagascar. This project involved:\n\n• Full-stack development using modern web technologies\n• Database architecture design for handling large-scale student data\n• Implementation of secure authentication and authorization systems\n• Integration with existing government education databases\n• User interface design for both administrators and students\n• Performance optimization for handling concurrent users\n\nThe system successfully streamlined the student registration process, reducing administrative overhead by 60% and improving data accuracy across participating institutions. This experience provided invaluable insights into government-scale software development and the unique challenges of Madagascar's educational infrastructure.`,
+      summary: 'J\'ai développé un système complet d\'enregistrement des étudiants pour les établissements d\'enseignement supérieur de Madagascar, gérant des milliers de dossiers d\'étudiants et de données académiques.',
+      details: `Lors de mon stage chez MESUPRES, j'étais responsable de la conception et du développement d'un système d'inscription des étudiants essentiel, destiné à plusieurs universités malgaches. Ce projet comprenait :\n\n• le développement full-stack utilisant des technologies web modernes\n• la conception de l'architecture de la base de données pour la gestion d'un volume important de données étudiantes\n• la mise en œuvre de systèmes d'authentification et d'autorisation sécurisés\n• l'intégration avec les bases de données gouvernementales existantes du secteur de l'éducation\n• la conception de l'interface utilisateur pour les administrateurs et les étudiants\n• l'optimisation des performances pour la gestion des utilisateurs simultanés\n\nLe système a permis de rationaliser efficacement le processus d'inscription des étudiants, réduisant ainsi les frais administratifs de 60 % et améliorant la précision des données dans les établissements participants. Cette expérience m'a apporté des connaissances précieuses sur le développement de logiciels à l'échelle gouvernementale et sur les défis spécifiques à l'infrastructure éducative malgache.`,
       skills: ['React', 'Node.js', 'PostgreSQL', 'Express.js', 'JWT Authentication', 'REST APIs'],
       achievements: [
-        'Delivered fully functional system ahead of schedule','Reduced student registration time by 60%','Implemented secure data handling for sensitive student information','Trained administrative staff on system usage','Received commendation from ministry officials for code quality'
+        'Système entièrement fonctionnel livré en avance sur le calendrier prévu, réduction de 60 % du temps d\'inscription des étudiants, mise en place d\'une gestion sécurisée des données sensibles des étudiants, formation du personnel administratif à l\'utilisation du système, félicitations des représentants du ministère pour la qualité du code'
       ]
     },
     {
-      type: 'project',period: 'Mar 2024 - May 2024',title: 'FC FOUDRE Official Website',organization: 'Freelance Project',location: 'Remote',summary: 'Designed and developed a modern, responsive website for FC FOUDRE football club, featuring team management, match scheduling, and fan engagement tools.',
-      details: `The FC FOUDRE website project showcased my ability to work independently with clients and deliver a complete digital solution for a local football club. The project scope included:\n\n• Modern, mobile-first responsive design\n• Content management system for team and match information\n• Player profiles and statistics tracking\n• News and blog functionality for club updates\n• Photo gallery and media management\n• Contact forms and fan engagement features\n• SEO optimization for local search visibility\n\nWorking directly with club management, I gathered requirements, provided design mockups, and delivered a solution that significantly improved their online presence. The website increased fan engagement by 200% and helped the club attract new sponsors through professional presentation.`,
+      type: 'project',period: 'Mar 2024 - May 2024',title: 'FC FOUDRE Site officiel',organization: 'Projet Freelance',location: 'Remote',summary: 'Conception et développement d\'un site web moderne et adaptatif pour le club de football FC FOUDRE, comprenant des outils de gestion d\'équipe, de planification des matchs et d\'engagement des supporters.',
+      details: `Le projet de site web du FC FOUDRE a mis en évidence ma capacité à travailler de manière autonome avec les clients et à fournir une solution numérique complète pour un club de football local. Le périmètre du projet comprenait :\n\n• Conception moderne et réactive, axée sur les mobiles\n• Content management system for team and match information\n• Suivi des profils et des statistiques des joueurs\n• News and blog functionality for club updates\n• Gestion de la galerie photo et des médias\n• Formulaires de contact et fonctionnalités d'engagement des fans\n• Optimisation SEO pour la visibilité en recherche locale\n\nEn collaboration directe avec la direction du club, j'ai recueilli leurs besoins, fourni des maquettes et livré une solution qui a considérablement amélioré leur présence en ligne. Le site web a permis d'accroître l'engagement des supporters de 200 % et a aidé le club à attirer de nouveaux sponsors grâce à une présentation professionnelle.`,
       skills: ['React', 'TypeScript', 'Tailwind CSS', 'Sanity CMS', 'Vercel', 'SEO'],
       achievements: [
         'Increased club\'s online visibility by 200%',
@@ -59,8 +73,24 @@ const JourneyTimeline: React.FC = () => {
     {
       type: 'certification',
       period: 'Sep 2024',
-      title: 'TECHLAB-JS Certification',
-      organization: 'TECHLAB Madagascar',
+      title: 'Certification TECHLAB-JS',
+      organization: 'Etech Madagascar',
+      location: 'Antananarivo, Madagascar',
+      summary: 'Advanced JavaScript certification program focusing on modern ES6+ features, asynchronous programming, and full-stack development best practices.',
+      details: `The TECHLAB-JS certification program was an intensive 3-month course covering advanced JavaScript concepts and modern development practices. The curriculum included:\n\n• ES6+ features and modern JavaScript syntax\n• Asynchronous programming with Promises and async/await\n• Advanced DOM manipulation and event handling\n• Node.js server-side development\n• RESTful API design and implementation\n• Testing methodologies and frameworks\n• Performance optimization techniques\n• Security best practices in web development\n\nThis certification validated my expertise in JavaScript and demonstrated my commitment to continuous learning and staying current with industry standards. The hands-on projects and peer collaboration enhanced my problem-solving skills and code quality.`,
+      skills: ['JavaScript ES6+', 'Node.js', 'Express.js', 'Testing', 'API Development', 'Performance Optimization'],
+      achievements: [
+        'Achieved certification with 95% score',
+        'Completed all practical projects with distinction',
+        'Mentored junior developers during group exercises',
+        'Contributed to open-source projects as part of curriculum'
+      ]
+    },
+    {
+      type: 'certification',
+      period: 'Jan 2026',
+      title: 'Certification Base IA chez ODC',
+      organization: 'Orange Digital Center Madagascar',
       location: 'Antananarivo, Madagascar',
       summary: 'Advanced JavaScript certification program focusing on modern ES6+ features, asynchronous programming, and full-stack development best practices.',
       details: `The TECHLAB-JS certification program was an intensive 3-month course covering advanced JavaScript concepts and modern development practices. The curriculum included:\n\n• ES6+ features and modern JavaScript syntax\n• Asynchronous programming with Promises and async/await\n• Advanced DOM manipulation and event handling\n• Node.js server-side development\n• RESTful API design and implementation\n• Testing methodologies and frameworks\n• Performance optimization techniques\n• Security best practices in web development\n\nThis certification validated my expertise in JavaScript and demonstrated my commitment to continuous learning and staying current with industry standards. The hands-on projects and peer collaboration enhanced my problem-solving skills and code quality.`,
@@ -74,9 +104,9 @@ const JourneyTimeline: React.FC = () => {
     },
     {
       type: 'education',
-      period: 'Oct 2024 - Present',
-      title: 'Continuous Learning & Skill Development',
-      organization: 'Self-Directed Learning',
+      period: 'Janv 2025 - Present',
+      title: 'Apprentissage continu et développement des compétences',
+      organization: 'Apprentissage autodirigé',
       location: 'Remote',
       summary: 'Ongoing professional development focusing on emerging technologies, cloud platforms, and advanced full-stack development patterns.',
       details: `My commitment to continuous learning drives me to stay current with rapidly evolving web technologies. Current focus areas include:\n\n• Advanced React patterns and performance optimization\n• TypeScript for large-scale application development\n• Cloud platforms (AWS, Vercel, Netlify) and serverless architecture\n• Modern CSS frameworks and design systems\n• DevOps practices and CI/CD pipelines\n• Mobile development with React Native\n• AI/ML integration in web applications\n\nI actively participate in online communities, contribute to open-source projects, and build personal projects to experiment with new technologies. This approach ensures I can bring the latest best practices and innovations to every project I work on.`,

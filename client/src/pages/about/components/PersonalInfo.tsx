@@ -20,18 +20,18 @@ interface SocialLink {
 const PersonalInfo: React.FC = () => {
   const personalDetails: PersonalDetail[] = [
     { icon: 'MapPin', label: 'Location', value: 'Antananarivo, Madagascar' },
-    { icon: 'Calendar', label: 'Age', value: '24 years old' },
+    { icon: 'Calendar', label: 'Age', value: '23 ans' },
     { icon: 'GraduationCap', label: 'Education', value: 'MIAGE - ESMIA' },
-    { icon: 'Languages', label: 'Languages', value: 'French, English, Malagasy' },
+    { icon: 'Languages', label: 'Languages', value: 'Français, anglais, Malagasy' },
     { icon: 'Globe', label: 'Timezone', value: 'GMT+3 (EAT)' },
-    { icon: 'Heart', label: 'Interests', value: 'Football, Technology, Travel' }
+    { icon: 'Heart', label: 'Interests', value: 'Football, technologie, voyages, jeux vidéo' }
   ];
 
   const socialLinks: SocialLink[] = [
     { icon: 'Github', label: 'GitHub', url: 'https://github.com/lucien', color: 'text-gray-700' },
     { icon: 'Linkedin', label: 'LinkedIn', url: 'https://linkedin.com/in/lucien', color: 'text-blue-600' },
-    { icon: 'Mail', label: 'Email', url: 'mailto:lucien@example.com', color: 'text-red-500' },
-    { icon: 'Phone', label: 'Phone', url: 'tel:+261123456789', color: 'text-green-600' }
+    { icon: 'Mail', label: 'Email', url: 'mailto:savakalucien@gmail.com', color: 'text-red-500' },
+    { icon: 'Phone', label: 'Phone', url: 'tel:+261 032 87 546 72', color: 'text-green-600' }
   ];
 
   return (
@@ -53,14 +53,14 @@ const PersonalInfo: React.FC = () => {
         
         <div className="flex-1 text-center md:text-left">
           <h2 className="text-3xl font-bold text-foreground mb-2">
-            Lucien Rakotondrabe
+            RAFARALAHY Savaka Lucien
           </h2>
           <p className="text-lg text-primary font-medium mb-3">
-            Full Stack Developer & MIAGE Graduate
+            Développeur Full Stack
           </p>
           <p className="text-muted-foreground leading-relaxed max-w-2xl">
-            Passionate developer from Madagascar bridging traditional computer science foundations with modern web technologies. 
-            Specialized in React, TypeScript, and Node.js with a unique perspective on global tech solutions.
+            Développeur passionné originaire de Madagascar, alliant les fondements de l'informatique aux technologies web modernes.
+            Spécialisé en React, TypeScript et Node.js, j'offre une vision unique des solutions technologiques globales.
           </p>
           
           {/* Social Links */}
@@ -108,7 +108,7 @@ const PersonalInfo: React.FC = () => {
             iconPosition="left"
             onClick={() => window.open('/resume-lucien.pdf', '_blank')}
           >
-            Download Resume
+            Télécharger mon CV
           </Button>
           <Button
             variant="outline"
@@ -116,7 +116,7 @@ const PersonalInfo: React.FC = () => {
             iconPosition="left"
             onClick={() => window.location.href = '/contact'}
           >
-            Let's Connect
+            Me contacter
           </Button>
         </div>
       </div>

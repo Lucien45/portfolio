@@ -50,18 +50,18 @@ const GitHubStats: React.FC = () => {
     // Mock GitHub data - in real implementation, this would come from GitHub API
     const mockGitHubData: GitHubStatsData = {
         profile: {
-        name: "Lucien Razafy",
-        username: "lucienrazafy",
-        avatar: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=150&h=150&fit=crop&crop=face",
-        bio: "Full-stack developer from Madagascar specializing in React, TypeScript, and modern web technologies",
+        name: "Savaka Lucien",
+        username: "Lucien45",
+        avatar: "/photo_a_jour_resize.jpg",
+        bio: "Développeur full-stack",
         followers: 127,
         following: 89,
         publicRepos: 24
         },
         repositories: [
         {
-            name: "mesupres-registry",
-            description: "Student registry system built with React and Node.js for MESUPRES Madagascar",
+            name: "mesupres-registre",
+            description: "Système d'inscription des étudiants développé avec React et Node.js pour MESUPRES Madagascar",
             language: "TypeScript",
             stars: 15,
             forks: 3,
@@ -70,7 +70,7 @@ const GitHubStats: React.FC = () => {
         },
         {
             name: "fc-foudre-website",
-            description: "Modern website for FC FOUDRE football club with match scheduling and player management",
+            description: "Site web moderne pour le club de football FC FOUDRE avec calendrier des matchs et gestion des joueurs",
             language: "JavaScript",
             stars: 8,
             forks: 2,
@@ -79,7 +79,7 @@ const GitHubStats: React.FC = () => {
         },
         {
             name: "portfolio-v2",
-            description: "Personal portfolio website showcasing projects and technical skills",
+            description: "Site web portfolio personnel présentant des projets et des compétences techniques",
             language: "TypeScript",
             stars: 12,
             forks: 1,
@@ -88,7 +88,7 @@ const GitHubStats: React.FC = () => {
         },
         {
             name: "react-components-library",
-            description: "Reusable React components library with TypeScript and Tailwind CSS",
+            description: "Bibliothèque de composants React réutilisables avec TypeScript et Tailwind CSS",
             language: "TypeScript",
             stars: 6,
             forks: 1,
@@ -152,7 +152,7 @@ const GitHubStats: React.FC = () => {
             <div className="flex items-center justify-between mb-6">
                 <h3 className="text-lg font-semibold text-foreground flex items-center">
                     <Icon name="Github" size={20} className="mr-2" />
-                    GitHub Activity
+                    Activité GitHub
                 </h3>
                 <a
                     href={`https://github.com/${stats?.profile.username}`}
@@ -160,7 +160,7 @@ const GitHubStats: React.FC = () => {
                     rel="noopener noreferrer"
                     className="text-sm text-muted-foreground hover:text-foreground transition-colors"
                 >
-                View Profile →
+                    Voir le profil →
                 </a>
             </div>
             {/* Profile Summary */}
@@ -180,7 +180,7 @@ const GitHubStats: React.FC = () => {
             <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-6">
                 <div className="text-center p-3 bg-muted/50 rounded-lg">
                     <div className="text-lg font-bold text-foreground">{stats?.profile?.publicRepos}</div>
-                    <div className="text-xs text-muted-foreground">Repositories</div>
+                    <div className="text-xs text-muted-foreground">Repo</div>
                 </div>
                 <div className="text-center p-3 bg-muted/50 rounded-lg">
                     <div className="text-lg font-bold text-foreground">{stats?.contributions?.totalCommits}</div>
@@ -197,7 +197,7 @@ const GitHubStats: React.FC = () => {
             </div>
             {/* Language Distribution */}
             <div className="mb-6">
-                <h4 className="text-sm font-medium text-foreground mb-3">Most Used Languages</h4>
+                <h4 className="text-sm font-medium text-foreground mb-3">Languages les plus utilisées</h4>
                 <div className="space-y-2">
                     {stats?.languages?.map((lang, index) => (
                         <div key={index} className="flex items-center space-x-3">

@@ -7,6 +7,7 @@ import JourneyTimeline from './components/JourneyTimeline';
 import Icon from '../../components/AppIcon';
 import Button from '../../components/ui/Button';
 import type { IconName, StatsColor } from '../projects/type';
+import Footer from '../../components/ui/Footer';
 
 interface Stat {
   icon: IconName;
@@ -44,9 +45,9 @@ const About = () => {
     },
     {
       icon: 'Award',
-      value: '1',
+      value: '2',
       label: 'Certifications',
-      description: 'Y compris TECHLAB-JS et les réalisations académiques',
+      description: 'Y compris TECHLAB-JS,les bases de l\'IA chez ODC et les réalisations académiques',
       color: 'accent'
     },
     {
@@ -62,7 +63,7 @@ const About = () => {
     {
       icon: 'Lightbulb',
       title: 'Apprentissage continu',
-      description: 'Adopter de nouvelles technologies et méthodologies pour rester à la pointe de l’innovation en matière de développement Web.'
+      description: 'Adopter de nouvelles technologies et méthodologies pour rester à la pointe de l’innovation en matière de développement informatique.'
     },
     {
       icon: 'Users',
@@ -72,7 +73,7 @@ const About = () => {
     {
       icon: 'Target',
       title: 'Accent sur la qualité',
-      description: 'Delivering robust, scalable solutions that meet both technical excellence and business objectives.'
+      description: 'Fournir des solutions robustes et évolutives qui répondent à la fois aux exigences techniques et aux objectifs commerciaux.'
     },
     {
       icon: 'Globe',
@@ -113,7 +114,7 @@ const About = () => {
               <p className="text-xl text-muted-foreground max-w-3xl mx-auto leading-relaxed">
               D'étudiant ESMIA MIAGE à développeur professionnel, découvrez comment je relie 
               les fondements de l'informatique traditionnelle aux technologies web modernes, 
-              apportant une perspective unique de Madagascar à l'écosystème technologique mondial.
+              apportant une perspective unique à l'écosystème technologique mondial.
               </p>
             </div>
 
@@ -184,7 +185,7 @@ const About = () => {
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center mb-12">
               <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">
-                Educational & Professional Journey
+              Parcours éducatif et professionnel.
               </h2>
               <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
                 Une chronologie interactive présentant mon évolution d'étudiant en informatique à développeur full-stack
@@ -204,12 +205,12 @@ const About = () => {
               <Icon name="MessageCircle" size={48} className="text-primary mx-auto mb-6" />
               
               <h2 className="text-3xl font-bold text-foreground mb-4">
-                Let's Build Something Amazing Together
+                Construisons ensemble quelque chose d'extraordinaire.
               </h2>
               
               <p className="text-lg text-muted-foreground mb-8 max-w-2xl mx-auto">
-                Ready to bring your ideas to life? Whether you're looking for a dedicated team member 
-                or a freelance developer for your next project, I'd love to hear from you.
+                Prêt à donner vie à vos idées ? Que vous recherchiez un membre d'équipe dévoué
+                ou un développeur freelance pour votre prochain projet, n'hésitez pas à me contacter.
               </p>
               
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -220,7 +221,7 @@ const About = () => {
                   iconPosition="left"
                   onClick={() => window.location.href = '/contact'}
                 >
-                  Start a Conversation
+                  Entamer une conversation
                 </Button>
                 
                 <Button
@@ -230,13 +231,13 @@ const About = () => {
                   iconPosition="left"
                   onClick={() => window.location.href = '/projects'}
                 >
-                  View My Projects
+                  Afficher mes projets
                 </Button>
               </div>
               
               <div className="mt-8 pt-6 border-t border-border">
                 <p className="text-sm text-muted-foreground">
-                  Available for full-time opportunities and freelance projects
+                Disponible pour des postes à temps plein et des projets indépendants
                 </p>
               </div>
             </div>
@@ -244,15 +245,7 @@ const About = () => {
         </section>
 
         {/* Footer */}
-        <footer className="bg-foreground text-background py-8">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="text-center">
-              <p className="text-sm opacity-80">
-                © {new Date()?.getFullYear()} Lucien Rakotondrabe. Bridging Madagascar talent with global opportunities.
-              </p>
-            </div>
-          </div>
-        </footer>
+        <Footer/>
       </div>
     </>
   );
