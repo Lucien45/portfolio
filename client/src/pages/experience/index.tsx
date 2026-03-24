@@ -136,7 +136,7 @@ const Experience = () => {
                 <div className="w-12 h-12 bg-purple-100 rounded-lg flex items-center justify-center mx-auto mb-4">
                   <Icon name="GraduationCap" size={24} className="text-purple-600" />
                 </div>
-                <h3 className="text-lg font-semibold text-foreground mb-2">Developer Mentor</h3>
+                <h3 className="text-lg font-semibold text-foreground mb-2">Mentor de développeur</h3>
                 <p className="text-sm text-muted-foreground mb-4">
                   Guided 8 junior developers through code reviews, pair programming sessions, 
                   and career development advice.
