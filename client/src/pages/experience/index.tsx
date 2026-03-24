@@ -124,10 +124,10 @@ const Experience = () => {
                 <div className="w-12 h-12 bg-github-green/10 rounded-lg flex items-center justify-center mx-auto mb-4">
                   <Icon name="GitPullRequest" size={24} className="text-github-green" />
                 </div>
-                <h3 className="text-lg font-semibold text-foreground mb-2">Open Source Contributor</h3>
+                <h3 className="text-lg font-semibold text-foreground mb-2">Contributeur open source</h3>
                 <p className="text-sm text-muted-foreground mb-4">
-                  50+ merged pull requests across various projects, contributing to web accessibility 
-                  and developer tools for the Madagascar community.
+                Plus de 50 demandes de fusion réalisées sur différents projets, contribuant à l'accessibilité web
+                et aux outils de développement pour la communauté Madagascar.
                 </p>
                 <div className="text-2xl font-bold text-github-green">50+ PRs</div>
               </div>
