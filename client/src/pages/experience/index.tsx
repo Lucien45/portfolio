@@ -112,10 +112,10 @@ const Experience = () => {
         <section className="py-16 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-primary/5 to-secondary/5">
           <div className="max-w-4xl mx-auto text-center">
             <div className="mb-12">
-              <h2 className="text-3xl font-bold text-foreground mb-4">Community Recognition</h2>
+              <h2 className="text-3xl font-bold text-foreground mb-4">Reconnaissance communautaire</h2>
               <p className="text-muted-foreground max-w-2xl mx-auto">
-                Active contributions to the Madagascar tech ecosystem through open source projects, 
-                mentorship, and community building initiatives.
+              Contributions actives à l'écosystème technologique malgache par le biais de projets open source,
+              de mentorat et d'initiatives de développement communautaire.
               </p>
             </div>
 
