@@ -474,9 +474,9 @@ const Skills: React.FC = () => {
         <section className="py-16 px-4 sm:px-6 lg:px-8">
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-12">
-              <h2 className="text-3xl font-bold text-foreground mb-4">Learning Journey Timeline</h2>
+              <h2 className="text-3xl font-bold text-foreground mb-4">Chronologie du parcours d’apprentissage</h2>
               <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-                Track my continuous learning and skill development progression over the years.
+              Suivre ma progression continue en matière d'apprentissage et de développement des compétences au fil des ans.
               </p>
             </div>
 
@@ -487,9 +487,9 @@ const Skills: React.FC = () => {
         {/* Call to Action */}
         <section className="py-16 px-4 sm:px-6 lg:px-8 bg-gradient-to-br from-primary/5 to-secondary/5">
           <div className="max-w-4xl mx-auto text-center">
-            <h2 className="text-3xl font-bold text-foreground mb-4">Ready to Collaborate?</h2>
+            <h2 className="text-3xl font-bold text-foreground mb-4">Prêts à collaborer ?</h2>
             <p className="text-lg text-muted-foreground mb-8">
-              Let's discuss how my technical skills can contribute to your next project. I'm always excited to tackle new challenges and learn emerging technologies.
+            Parlons de la manière dont mes compétences techniques peuvent contribuer à votre prochain projet. Je suis toujours enthousiaste à l'idée de relever de nouveaux défis et d'apprendre les technologies émergentes.
             </p>
             
             <div className="flex flex-col sm:flex-row justify-center gap-4">
