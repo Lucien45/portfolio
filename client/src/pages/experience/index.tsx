@@ -138,8 +138,8 @@ const Experience = () => {
                 </div>
                 <h3 className="text-lg font-semibold text-foreground mb-2">Mentor de développeur</h3>
                 <p className="text-sm text-muted-foreground mb-4">
-                  Guided 8 junior developers through code reviews, pair programming sessions, 
-                  and career development advice.
+                J'ai encadré 8 développeurs juniors lors de revues de code et de sessions de programmation en binôme, 
+                et des conseils en matière de développement de carrière.
                 </p>
                 <div className="text-2xl font-bold text-purple-600">8 Mentees</div>
               </div>
