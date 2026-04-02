@@ -34,7 +34,7 @@ const staticProfile: ProfileFormValues = {
   bio: "Passionate developer building modern web apps with React and Node.js.",
   website: "https://alexmartin.dev",
   github: "Lucien45",
-  linkedin: "alexmartin",
+  linkedin: "savakalucien",
   twitter: "@alexmartin",
   available: true,
   yearsOfExperience: 5,

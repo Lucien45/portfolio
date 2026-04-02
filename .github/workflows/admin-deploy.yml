@@ -40,6 +40,7 @@ jobs:
           script: |
             if [ ! -d "/home/ubuntu/deploiment/portfolio/admin" ]; then
               mkdir -p /home/ubuntu/deploiment/portfolio/admin
+              touch /home/ubuntu/deploiment/portfolio/admin/.env.templete
               echo "Admin directory created"
             else
               echo "Admin directory already exists, skipping"
