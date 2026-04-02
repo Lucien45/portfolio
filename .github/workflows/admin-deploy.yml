@@ -66,7 +66,7 @@ jobs:
           port: 22
           source: "admin/dist/"
           target: "/home/ubuntu/deploiment/portfolio/admin/"
-          strip_components: 2
+          strip_components: 1
 
       - name: Copy docker-compose to VPS
         uses: appleboy/scp-action@v0.1.3
