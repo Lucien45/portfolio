@@ -5,6 +5,10 @@ import path from 'path'
 
 // https://vite.dev/config/
 export default defineConfig({
+  build: {
+    outDir: "dist",
+    chunkSizeWarningLimit: 2000,
+  },
   plugins: [
     react(),
     // tailwindcss(),
