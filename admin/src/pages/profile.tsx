@@ -28,7 +28,7 @@ type ProfileFormValues = z.infer<typeof profileSchema>;
 const staticProfile: ProfileFormValues = {
   name: "Savaka Lucien",
   email: "savakalucien@gmail.com",
-  phone: "+33 6 12 34 56 78",
+  phone: "+33 6 12 34 56 88",
   title: "Full-Stack Developer",
   location: "Paris, France",
   bio: "Passionate developer building modern web apps with React and Node.js.",

@@ -53,8 +53,9 @@ jobs:
           username: ${{ secrets.VPS_USER }}
           key: ${{ secrets.VPS_SSH_KEY }}
           port: 22
-          source: "admin/Dockerfile,admin/nginx/,admin/.env.templete"
+          source: "admin/Dockerfile,admin/nginx/"
           target: "/home/ubuntu/deploiment/portfolio/admin/"
+          strip_components: 1
 
       - name: Copy build files to VPS
         uses: appleboy/scp-action@v0.1.3
