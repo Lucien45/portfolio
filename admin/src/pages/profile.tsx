@@ -35,7 +35,7 @@ const staticProfile: ProfileFormValues = {
   website: "https://alexmartin.dev",
   github: "Lucien45",
   linkedin: "savakalucien",
-  twitter: "@alexmartin",
+  twitter: "@lucien",
   available: true,
   yearsOfExperience: 5,
   projectsCompleted: 32,

@@ -14,8 +14,6 @@ services:
     build:
       context: ./admin/
     container_name: portfolio_admin
-    env_file:
-      - ./admin/.env.templete
     ports:
       - "4050:80"
     restart: always
