@@ -29,7 +29,33 @@ jobs:
       working-directory: ./client
       run: npm run build
 
+    - name: Prepare directories on VPS
+      uses: appleboy/ssh-action@v0.1.5
+      with:
+        host: ${{ secrets.VPS_HOST }}
+        username: ${{ secrets.VPS_USER }}
+        key: ${{ secrets.VPS_SSH_KEY }}
+        port: 22
+        script: |
+          if [ ! -d "/home/ubuntu/deploiment/portfolio/client" ]; then
+            mkdir -p /home/ubuntu/deploiment/portfolio/client
+            echo "client directory created"
+          else
+            echo "client directory already exists, skipping"
+          fi
+
     - name: Copy files to VPS
+      uses: appleboy/scp-action@v0.1.3
+      with:
+        host: ${{ secrets.VPS_HOST }}
+        username: ${{ secrets.VPS_USER }}
+        key: ${{ secrets.VPS_SSH_KEY }}
+        port: 22
+        source: "client/Dockerfile,client/nginx/"
+        target: "/home/ubuntu/deploiment/portfolio/client/"
+        strip_components: 1
+
+    - name: Copy build files to VPS
       uses: appleboy/scp-action@v0.1.3
       with:
         host: ${{ secrets.VPS_HOST }}
@@ -38,7 +64,7 @@ jobs:
         port: 22
         source: "client/build/"
         target: "/home/ubuntu/deploiment/portfolio/client/"
-        strip_components: 2
+        strip_components: 1
 
     - name: Copy docker-compose to VPS
       uses: appleboy/scp-action@v0.1.3

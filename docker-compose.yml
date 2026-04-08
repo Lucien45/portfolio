@@ -7,7 +7,6 @@ services:
     container_name: portfolio_client
     ports:
       - "4028:80"
-      # - "443:443"
     restart: always
 
   admin:
