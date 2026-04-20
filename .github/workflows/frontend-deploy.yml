@@ -6,6 +6,7 @@ on:
       - main
     paths:
       - 'client/**'
+      - 'docker-compose.yml'
   workflow_dispatch:
 
 jobs:
@@ -28,6 +29,8 @@ jobs:
     - name: Build frontend
       working-directory: ./client
       run: npm run build
+      env:
+        VITE_API_URL: ${{ secrets.VITE_API_URL }}
 
     - name: Prepare directories on VPS
       uses: appleboy/ssh-action@v0.1.5

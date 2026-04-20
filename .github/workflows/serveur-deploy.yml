@@ -1,11 +1,12 @@
-name: Admin Deploy
+name: Server Deploy
 
 on:
   push:
     branches:
       - main
     paths:
-      - 'admin/**'
+      - 'server/**'
+      - 'docker-compose.yml'
   workflow_dispatch:
 
 jobs:
@@ -21,15 +22,12 @@ jobs:
           node-version: '22'
 
       - name: Install dependencies
-        working-directory: ./admin
+        working-directory: ./server
         run: npm install
 
-      - name: Build admin
-        working-directory: ./admin
+      - name: Build server
+        working-directory: ./server
         run: npm run build
-        env:
-          BASE_URL: ${{ secrets.BASE_URL }}
-          VITE_API_URL: ${{ secrets.VITE_API_URL }}
 
       - name: Prepare directories on VPS
         uses: appleboy/ssh-action@v0.1.5
@@ -39,12 +37,11 @@ jobs:
           key: ${{ secrets.VPS_SSH_KEY }}
           port: 22
           script: |
-            if [ ! -d "/home/ubuntu/deploiment/portfolio/admin" ]; then
-              mkdir -p /home/ubuntu/deploiment/portfolio/admin
-              touch /home/ubuntu/deploiment/portfolio/admin/.env.templete
-              echo "Admin directory created"
+            if [ ! -d "/home/ubuntu/deploiment/portfolio/server" ]; then
+              mkdir -p /home/ubuntu/deploiment/portfolio/server
+              echo "Server directory created"
             else
-              echo "Admin directory already exists, skipping"
+              echo "Server directory already exists, skipping"
             fi
 
       - name: Copy files to VPS
@@ -54,8 +51,8 @@ jobs:
           username: ${{ secrets.VPS_USER }}
           key: ${{ secrets.VPS_SSH_KEY }}
           port: 22
-          source: "admin/Dockerfile,admin/nginx/"
-          target: "/home/ubuntu/deploiment/portfolio/admin/"
+          source: "server/Dockerfile,server/package.json"
+          target: "/home/ubuntu/deploiment/portfolio/server/"
           strip_components: 1
 
       - name: Copy build files to VPS
@@ -65,9 +62,20 @@ jobs:
           username: ${{ secrets.VPS_USER }}
           key: ${{ secrets.VPS_SSH_KEY }}
           port: 22
-          source: "admin/dist/"
-          target: "/home/ubuntu/deploiment/portfolio/admin/"
+          source: "server/dist/"
+          target: "/home/ubuntu/deploiment/portfolio/server/"
           strip_components: 1
+
+      # - name: Copy node_modules to VPS
+      #   uses: appleboy/scp-action@v0.1.3
+      #   with:
+      #     host: ${{ secrets.VPS_HOST }}
+      #     username: ${{ secrets.VPS_USER }}
+      #     key: ${{ secrets.VPS_SSH_KEY }}
+      #     port: 22
+      #     source: "server/node_modules/"
+      #     target: "/home/ubuntu/deploiment/portfolio/server/"
+      #     strip_components: 1
 
       - name: Copy docker-compose to VPS
         uses: appleboy/scp-action@v0.1.3
@@ -78,6 +86,30 @@ jobs:
           port: 22
           source: "docker-compose.yml"
           target: "/home/ubuntu/deploiment/portfolio/"
+
+      - name: Create .env on VPS
+        uses: appleboy/ssh-action@v0.1.5
+        with:
+          host: ${{ secrets.VPS_HOST }}
+          username: ${{ secrets.VPS_USER }}
+          key: ${{ secrets.VPS_SSH_KEY }}
+          port: 22
+          script: |
+            cat > /home/ubuntu/deploiment/portfolio/server/.env << 'EOF'
+            DB_HOST=${{ secrets.DB_HOST }}
+            DB_PORT=${{ secrets.DB_PORT }}
+            DB_USER=${{ secrets.DB_USER }}
+            DB_PASSWORD=${{ secrets.DB_PASSWORD }}
+            DB_NAME=${{ secrets.DB_NAME }}
+            DB_SCHEMA=production
+            SUPABASE_URL=${{ secrets.SUPABASE_URL }}
+            SUPABASE_KEY=${{ secrets.SUPABASE_KEY }}
+            SUPABASE_BUCKET=${{ secrets.SUPABASE_BUCKET }}
+            PORT=3000
+            JWT_SECRET=${{ secrets.JWT_SECRET }}
+            CORS_ORIGIN=${{ secrets.CORS_ORIGIN }}
+            NODE_ENV=production
+            EOF
 
       - name: SSH & Deploy Docker Compose
         uses: appleboy/ssh-action@v0.1.5

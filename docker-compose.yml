@@ -8,6 +8,8 @@ services:
     ports:
       - "4028:80"
     restart: always
+    depends_on:
+      - server
 
   admin:
     build:
@@ -16,3 +18,21 @@ services:
     ports:
       - "4050:80"
     restart: always
+    depends_on:
+      - server
+
+  server:
+    build:
+      context: ./server/
+    container_name: portfolio_server
+    ports:
+      - "3000:3000"
+    env_file:
+      - ./server/.env
+    restart: always
+    healthcheck:
+      test: ["CMD", "wget", "-qO-", "http://localhost:3000/health"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+      start_period: 20s
