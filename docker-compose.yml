@@ -28,11 +28,7 @@ services:
     ports:
       - "3000:3000"
     env_file:
-      - path: ./server/.env
-        required: false
-    environment:
-      - NODE_ENV=production
-      - PORT=3000
+      - ./server/.env
     restart: always
     healthcheck:
       test: ["CMD", "wget", "-qO-", "http://localhost:3000/health"]

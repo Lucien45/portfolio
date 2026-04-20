@@ -6,6 +6,7 @@ on:
       - main
     paths:
       - 'admin/**'
+      - 'docker-compose.yml'
   workflow_dispatch:
 
 jobs:
@@ -45,6 +46,11 @@ jobs:
               echo "Admin directory created"
             else
               echo "Admin directory already exists, skipping"
+            fi
+            if [ ! -f "/home/ubuntu/deploiment/portfolio/server/.env" ]; then
+              mkdir -p /home/ubuntu/deploiment/portfolio/server
+              touch /home/ubuntu/deploiment/portfolio/server/.env
+              echo "server .env created"
             fi
 
       - name: Copy files to VPS
