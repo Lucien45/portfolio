@@ -85,5 +85,6 @@ jobs:
         port: 22
         script: |
           cd /home/ubuntu/deploiment/portfolio/
-          docker-compose down
+          docker-compose down --remove-orphans || true
+          docker network prune -f
           docker-compose up -d --build
