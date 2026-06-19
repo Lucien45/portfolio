@@ -31,7 +31,7 @@ const ProjectPreview = () => {
       image: 'https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=600&h=400&fit=crop',
       technologies: ['React', 'TypeScript', 'Nest.js', 'PostgreSQL', 'Docker'],
       features: ['Student Registration', 'Document Management', 'Real-time Analytics', 'Multi-language Support'],
-      status: 'Production',
+      status: 'Development',
       impact: '10,000+ students registered',
       github: 'https://github.com/Lucien45/School-Management',
       live: 'https://School-Management.mg',
@@ -59,10 +59,10 @@ const ProjectPreview = () => {
       image: 'https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?w=600&h=400&fit=crop',
       technologies: ['Next.js', 'TypeScript', 'React', 'PostgresQL', 'Tailwind CSS', 'Docker', 'Render'],
       features: ['Article Catalog', 'Order Tracking', 'Admin Dashboard'],
-      status: 'Development',
+      status: 'Production',
       impact: 'Launching Q1 2025',
       github: 'https://github.com/Lucien45/Gestion-Article',
-      live: 'https://gestion-article-frontoffice.onrender.com/',
+      live: 'https://gestion-article.demonstartion.co.uk/',
       color: 'from-orange-500 to-red-500'
     }
   ];

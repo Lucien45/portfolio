@@ -56,18 +56,17 @@ const Projects = () => {
   const projects: Project[] = [
     {
       id: 1,
-      title: "MESUPRES Registry System",
-      subtitle: "Student Management Platform",
-      description: "Comprehensive student registry system for MESUPRES Madagascar with enrollment management, academic tracking, and administrative tools.",
-      fullDescription: `The MESUPRES Registry System is a comprehensive web application designed to streamline student management processes at MESUPRES Madagascar. This system handles student enrollment, academic record tracking, course management, and administrative workflows.\n\nBuilt with modern web technologies, the platform provides a seamless experience for administrators, faculty, and students. The system includes features for student registration, grade management, attendance tracking, and report generation.\n\nThe application was developed using React with TypeScript for the frontend, Node.js with Express for the backend, and PostgreSQL for data storage. The system implements role-based access control, ensuring data security and appropriate access levels for different user types.`,
-      image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=800&h=400&fit=crop",
-      technologies: ["React", "TypeScript", "Node.js", "PostgreSQL", "Express", "Tailwind CSS"],
+      title: "School Management",
+      subtitle: "Full-Stack Web Application",
+      description: "School-Management SAAS est une plateforme web moderne conçue pour aider les établissements scolaires à gérer efficacement leurs opérations quotidiennes. Construit avec React, Nest.js et PostgreSQL.",
+      image: 'https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=600&h=400&fit=crop',
+      technologies: ['React', 'TypeScript', 'Nest.js', 'PostgreSQL', 'Docker'],
       category: "web",
       type: "Full-Stack Application",
-      status: "completed",
-      year: "2024",
-      demoUrl: "https://mesupres-demo.vercel.app",
-      githubUrl: "https://github.com/Lucien45/consultation",
+      status: "Development",
+      year: "2026",
+      demoUrl: "",
+      githubUrl: "https://github.com/Lucien45/School-Management",
       metrics: [
         { label: "Active Users", value: "500+" },
         { label: "Student Records", value: "2,000+" },
@@ -147,13 +146,13 @@ const StudentRegistration: React.FC = () => {
       description: "Modern website for FC FOUDRE football club featuring match scheduling, player profiles, news updates, and fan engagement tools.",
       fullDescription: `The FC FOUDRE website is a comprehensive digital platform designed for the football club to manage their online presence and engage with fans. The website includes features for match scheduling, player management, news publication, and fan interaction.\n\nThe platform provides administrators with tools to manage team rosters, schedule matches, publish news articles, and track statistics. Fans can view upcoming matches, player profiles, team news, and interact with the community through comments and social features.\n\nBuilt with React and modern web technologies, the website is fully responsive and optimized for performance. The design reflects the club's brand identity while providing an intuitive user experience for both administrators and visitors.`,
       image: "https://images.unsplash.com/photo-1574629810360-7efbbe195018?w=800&h=400&fit=crop",
-      technologies: ["React", "JavaScript", "Firebase", "Tailwind CSS", "Framer Motion"],
+      technologies: ["React", "TypeScript", "vite", "PostgresQL", "Tailwind CSS", "Framer Motion"],
       category: "web",
       type: "Website",
       status: "completed",
       year: "2024",
       demoUrl: "https://fcfoudre.com/",
-      githubUrl: "https://github.com/Lucien45",
+      githubUrl: "",
       metrics: [
         { label: "Monthly Visitors", value: "1,200+" },
         { label: "Match Records", value: "150+" },
@@ -177,7 +176,93 @@ const StudentRegistration: React.FC = () => {
     },
     {
       id: 3,
-      title: "Portfolio Website v2",
+      title: 'Article Management Platform',
+      subtitle: "",
+      description: 'Gestion-Article est une plateforme complète de gestion et publication d\'articles développée avec NestJS.',
+      fullDescription: 'Gestion-Article est une plateforme complète de gestion et publication d\'articles développée avec NestJS. Le projet comprend un back-office pour la gestion administrative, un front-office pour la consultation publique, et une API robuste basée sur PostgreSQL.',
+      image: 'https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?w=600&h=400&fit=crop',
+      technologies: ['Nest.js', 'TypeScript', 'React', 'PostgresQL', 'Tailwind CSS', 'Docker', 'Render'],
+      category: "web",
+      type: "Full-Stack Application",
+      status: "completed",
+      year: "2025",
+      demoUrl: "https://gestion-article.demonstartion.co.uk/",
+      githubUrl: "https://github.com/Lucien45/Gestion-Article",
+      metrics: [
+        { label: "Active Users", value: "500+" },
+        { label: "Student Records", value: "2,000+" },
+        { label: "Performance Score", value: "95%" }
+      ],
+      features: [
+        "Student enrollment and registration management",
+        "Academic record tracking and grade management",
+        "Course scheduling and management system",
+        "Administrative dashboard with analytics",
+        "Role-based access control for security",
+        "Report generation and data export",
+        "Responsive design for all devices",
+        "Real-time notifications and updates"
+      ],
+      gallery: [
+        "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=800&h=400&fit=crop",
+        "https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=800&h=400&fit=crop",
+        "https://images.unsplash.com/photo-1554224155-6726b3ff858f?w=800&h=400&fit=crop"
+      ],
+      codeSnippets: [
+        {
+          title: "Student Registration Component",
+          language: "TypeScript",
+          code: `interface StudentFormData {
+  firstName: string;
+  lastName: string;
+  email: string;
+  studentId: string;
+  program: string;
+}
+
+const StudentRegistration: React.FC = () => {
+  const [formData, setFormData] = useState<StudentFormData>({
+    firstName: '',
+    lastName: '',
+    email: '',
+    studentId: '',
+    program: ''
+  });
+
+  const handleSubmit = async (e: React.FormEvent) => {
+    e.preventDefault();
+    try {
+      const response = await api.post('/students', formData);
+      toast.success('Student registered successfully');
+    } catch (error) {
+      toast.error('Registration failed');
+    }
+  };
+
+  return (
+    <form onSubmit={handleSubmit} className="space-y-4">
+      <Input
+        label="First Name"
+        value={formData.firstName}
+        onChange={(e) => setFormData({...formData, firstName: e.target.value})}
+        required
+      />
+      {/* Additional form fields */}
+    </form>
+  );
+};`
+        }
+      ],
+      achievements: [
+        "Successfully deployed and serving 500+ active users",
+        "Reduced administrative workload by 60%",
+        "Achieved 99.9% uptime since deployment",
+        "Implemented comprehensive security measures"
+      ]
+    },
+    {
+      id: 4,
+      title: "Portfolio Website",
       subtitle: "Personal Brand Platform",
       description: "Modern portfolio website showcasing technical skills, projects, and professional experience with interactive elements and animations.",
       fullDescription: `This portfolio website represents the evolution of my personal brand and professional presence online. Built with cutting-edge web technologies, it showcases my technical skills, project portfolio, and professional journey in an engaging and interactive manner.\n\nThe website features a modern design with smooth animations, interactive elements, and comprehensive project showcases. It includes detailed case studies, code samples, and technical demonstrations that highlight my expertise in full-stack development.\n\nThe platform is built with React, TypeScript, and modern development practices, demonstrating proficiency in current web technologies while maintaining excellent performance and accessibility standards.`,
@@ -187,7 +272,7 @@ const StudentRegistration: React.FC = () => {
       type: "Portfolio",
       status: "completed",
       year: "2024",
-      demoUrl: "https://lucienrazafy.dev",
+      demoUrl: "https://www.rafaralahy.co.uk/",
       githubUrl: "https://github.com/Lucien45",
       metrics: [
         { label: "Performance Score", value: "98%" },
@@ -206,7 +291,7 @@ const StudentRegistration: React.FC = () => {
       ]
     },
     {
-      id: 4,
+      id: 5,
       title: "React Components Library",
       subtitle: "Reusable UI Components",
       description: "Comprehensive library of reusable React components built with TypeScript and Tailwind CSS for rapid application development.",
@@ -217,7 +302,7 @@ const StudentRegistration: React.FC = () => {
       type: "Component Library",
       status: "in-progress",
       year: "2024",
-      githubUrl: "https://github.com/Lucien45",
+      githubUrl: "",
       metrics: [
         { label: "Components", value: "45+" },
         { label: "Test Coverage", value: "92%" },
@@ -235,7 +320,7 @@ const StudentRegistration: React.FC = () => {
       ]
     },
     {
-      id: 5,
+      id: 6,
       title: "Task Management API",
       subtitle: "RESTful Backend Service",
       description: "Robust REST API for task management applications with authentication, real-time updates, and comprehensive project organization.",
@@ -246,7 +331,7 @@ const StudentRegistration: React.FC = () => {
       type: "Backend API",
       status: "completed",
       year: "2024",
-      githubUrl: "https://github.com/Lucien45",
+      githubUrl: "",
       metrics: [
         { label: "API Endpoints", value: "25+" },
         { label: "Response Time", value: "<100ms" },
@@ -264,7 +349,7 @@ const StudentRegistration: React.FC = () => {
       ]
     },
     {
-      id: 6,
+      id: 7,
       title: "Data Visualization Dashboard",
       subtitle: "Analytics Platform",
       description: "Interactive dashboard for data visualization and analytics with real-time charts, filtering capabilities, and export functionality.",
@@ -275,7 +360,7 @@ const StudentRegistration: React.FC = () => {
       type: "Dashboard",
       status: "in-progress",
       year: "2024",
-      githubUrl: "https://github.com/Lucien45",
+      githubUrl: "",
       metrics: [
         { label: "Data Points", value: "1M+" },
         { label: "Chart Types", value: "15+" },
@@ -291,7 +376,180 @@ const StudentRegistration: React.FC = () => {
         "User authentication and permissions",
         "API integration for external data sources"
       ]
+    },
+    {
+      id: 8,
+      title: "Consultation Register Management Application",
+      subtitle: "Consultation Register Management Application",
+      description: "Comprehensive Consultation Register Management for MESUPRES.",
+      fullDescription: `The MESUPRES Registry System is a comprehensive web application designed to streamline student management processes at MESUPRES Madagascar. This system handles student enrollment, academic record tracking, course management, and administrative workflows.\n\nBuilt with modern web technologies, the platform provides a seamless experience for administrators, faculty, and students. The system includes features for student registration, grade management, attendance tracking, and report generation.\n\nThe application was developed using React with TypeScript for the frontend, Node.js with Express for the backend, and PostgreSQL for data storage. The system implements role-based access control, ensuring data security and appropriate access levels for different user types.`,
+      image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=800&h=400&fit=crop",
+      technologies: ["Java", "Java Swing", "MySql", "Chart"],
+      category: "web",
+      type: "Full-Stack Application",
+      status: "completed",
+      year: "2024",
+      demoUrl: "",
+      githubUrl: "https://github.com/Lucien45/consultation",
+      metrics: [
+        { label: "Active Users", value: "500+" },
+        { label: "Student Records", value: "2,000+" },
+        { label: "Performance Score", value: "95%" }
+      ],
+      features: [
+        "Student enrollment and registration management",
+        "Academic record tracking and grade management",
+        "Course scheduling and management system",
+        "Administrative dashboard with analytics",
+        "Role-based access control for security",
+        "Report generation and data export",
+        "Responsive design for all devices",
+        "Real-time notifications and updates"
+      ],
+      gallery: [
+        "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=800&h=400&fit=crop",
+        "https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=800&h=400&fit=crop",
+        "https://images.unsplash.com/photo-1554224155-6726b3ff858f?w=800&h=400&fit=crop"
+      ],
+      codeSnippets: [
+        {
+          title: "Student Registration Component",
+          language: "TypeScript",
+          code: `interface StudentFormData {
+  firstName: string;
+  lastName: string;
+  email: string;
+  studentId: string;
+  program: string;
+}
+
+const StudentRegistration: React.FC = () => {
+  const [formData, setFormData] = useState<StudentFormData>({
+    firstName: '',
+    lastName: '',
+    email: '',
+    studentId: '',
+    program: ''
+  });
+
+  const handleSubmit = async (e: React.FormEvent) => {
+    e.preventDefault();
+    try {
+      const response = await api.post('/students', formData);
+      toast.success('Student registered successfully');
+    } catch (error) {
+      toast.error('Registration failed');
     }
+  };
+
+  return (
+    <form onSubmit={handleSubmit} className="space-y-4">
+      <Input
+        label="First Name"
+        value={formData.firstName}
+        onChange={(e) => setFormData({...formData, firstName: e.target.value})}
+        required
+      />
+      {/* Additional form fields */}
+    </form>
+  );
+};`
+        }
+      ],
+      achievements: [
+        "Successfully deployed and serving 500+ active users",
+        "Reduced administrative workload by 60%",
+        "Achieved 99.9% uptime since deployment",
+        "Implemented comprehensive security measures"
+      ]
+    },
+    {
+      id: 9,
+      title: "Management system for a health center ",
+      subtitle: "Private Clinic HMS",
+      description: "Management system for a private clinic HMS. Construit avec React, Nest.js et PostgreSQL.",
+      image: 'https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=600&h=400&fit=crop',
+      technologies: ['React', 'TypeScript', 'Nest.js', 'PostgreSQL', 'Docker'],
+      category: "web",
+      type: "Full-Stack Application",
+      status: "Development",
+      year: "2026",
+      demoUrl: "",
+      githubUrl: "Management-system-for-a-health-center ",
+      metrics: [
+        { label: "Active Users", value: "500+" },
+        { label: "Student Records", value: "2,000+" },
+        { label: "Performance Score", value: "95%" }
+      ],
+      features: [
+        "Patient registration and management",
+        "Appointment scheduling and management",
+        "Consultation management and tracking",
+        "Medical record management and tracking",
+        "Inventory management and tracking",
+        "Financial management and tracking",
+        "Reporting and analytics",
+        "Role-based access control for security",
+        "Responsive design for all devices",
+        "Real-time notifications and updates"
+      ],
+      gallery: [
+        "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=800&h=400&fit=crop",
+        "https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=800&h=400&fit=crop",
+        "https://images.unsplash.com/photo-1554224155-6726b3ff858f?w=800&h=400&fit=crop"
+      ],
+      codeSnippets: [
+        {
+          title: "Student Registration Component",
+          language: "TypeScript",
+          code: `interface StudentFormData {
+  firstName: string;
+  lastName: string;
+  email: string;
+  studentId: string;
+  program: string;
+}
+
+const StudentRegistration: React.FC = () => {
+  const [formData, setFormData] = useState<StudentFormData>({
+    firstName: '',
+    lastName: '',
+    email: '',
+    studentId: '',
+    program: ''
+  });
+
+  const handleSubmit = async (e: React.FormEvent) => {
+    e.preventDefault();
+    try {
+      const response = await api.post('/students', formData);
+      toast.success('Student registered successfully');
+    } catch (error) {
+      toast.error('Registration failed');
+    }
+  };
+
+  return (
+    <form onSubmit={handleSubmit} className="space-y-4">
+      <Input
+        label="First Name"
+        value={formData.firstName}
+        onChange={(e) => setFormData({...formData, firstName: e.target.value})}
+        required
+      />
+      {/* Additional form fields */}
+    </form>
+  );
+};`
+        }
+      ],
+      achievements: [
+        "Successfully deployed and serving 500+ active users",
+        "Reduced administrative workload by 60%",
+        "Achieved 99.9% uptime since deployment",
+        "Implemented comprehensive security measures"
+      ]
+    },
   ];
 
   // Categories for filtering
