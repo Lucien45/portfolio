@@ -28,8 +28,8 @@ const PersonalInfo: React.FC = () => {
   ];
 
   const socialLinks: SocialLink[] = [
-    { icon: 'Github', label: 'GitHub', url: 'https://github.com/lucien', color: 'text-gray-700' },
-    { icon: 'Linkedin', label: 'LinkedIn', url: 'https://linkedin.com/in/lucien', color: 'text-blue-600' },
+    { icon: 'Github', label: 'GitHub', url: 'https://github.com/Lucien45', color: 'text-gray-700' },
+    { icon: 'Linkedin', label: 'LinkedIn', url: 'https://linkedin.com/in/savak-lucien', color: 'text-blue-600' },
     { icon: 'Mail', label: 'Email', url: 'mailto:savakalucien@gmail.com', color: 'text-red-500' },
     { icon: 'Phone', label: 'Phone', url: 'tel:+261 032 87 546 72', color: 'text-green-600' }
   ];

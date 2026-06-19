@@ -157,6 +157,7 @@ const HeroSection = () => {
                 iconName="MessageCircle"
                 iconPosition="left"
                 className="group"
+                onClick={() => window.location.href = '/contact'}
               >
                 Collaborons
                 <Icon 
@@ -171,6 +172,7 @@ const HeroSection = () => {
                 size="lg"
                 iconName="Download"
                 iconPosition="left"
+                onClick={() => window.open('/resume-lucien.pdf', '_blank')}
               >
                 Télécharger CV
               </Button>
