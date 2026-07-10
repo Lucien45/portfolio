@@ -27,7 +27,7 @@ const CallToAction = () => {
       icon: 'Briefcase',
       color: 'from-primary to-blue-600',
       action: 'Planifier un entretien',
-      link: '/contact',
+      link: '/',
       features: ['Postes à temps plein', 'Prêt pour le travail à distance', 'Disponibilité immédiate', 'Tarifs compétitifs']
     },
     {
@@ -37,7 +37,7 @@ const CallToAction = () => {
       icon: 'Rocket',
       color: 'from-secondary to-green-600',
       action: 'Démarrer le projet',
-      link: '/contact',
+      link: '/',
       features: ['Développement personnalisé', 'Pile technologique moderne', 'Solutions évolutives', 'Un soutien continu']
     },
     {
@@ -47,7 +47,7 @@ const CallToAction = () => {
       icon: 'Users',
       color: 'from-accent to-orange-600',
       action: 'Connectez-vous maintenant',
-      link: '/contact',
+      link: '/',
       features: ['Projets open source', 'Partage de connaissances', 'Mentorship', 'Communauté technologique']
     }
   ];

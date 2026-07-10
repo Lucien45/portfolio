@@ -20,7 +20,7 @@ const Header = () => {
   ];
 
   const moreItems: NavItem[] = [
-    { name: 'Contact', path: '/contact', icon: 'Mail' },
+    // { name: 'Contact', path: '/contact', icon: 'Mail' },
   ];
 
   useEffect(() => {
@@ -91,10 +91,10 @@ const Header = () => {
             
             {/* More Menu */}
             <div className="relative group">
-              <button className="flex items-center space-x-2 px-3 py-2 rounded-md text-sm font-medium text-muted-foreground hover:text-foreground hover:bg-muted transition-brand">
+              {/* <button className="flex items-center space-x-2 px-3 py-2 rounded-md text-sm font-medium text-muted-foreground hover:text-foreground hover:bg-muted transition-brand">
                 <Icon name="MoreHorizontal" size={16} />
                 <span>Plus</span>
-              </button>
+              </button> */}
               
               <div className="absolute right-0 top-full mt-1 w-48 bg-popover border border-border rounded-md shadow-elevation opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-50">
                 <div className="py-1">

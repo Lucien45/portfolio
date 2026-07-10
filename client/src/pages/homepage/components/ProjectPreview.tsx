@@ -34,7 +34,7 @@ const ProjectPreview = () => {
       status: 'Development',
       impact: '10,000+ students registered',
       github: 'https://github.com/Lucien45/School-Management',
-      live: 'https://School-Management.mg',
+      live: '',
       color: 'from-blue-500 to-purple-600'
     },
     {

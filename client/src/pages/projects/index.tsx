@@ -778,7 +778,7 @@ const StudentRegistration: React.FC = () => {
                   size="lg"
                   iconName="MessageCircle"
                   iconPosition="left"
-                  onClick={() => window.location.href = '/contact'}
+                  // onClick={() => window.location.href = '/contact'}
                 >
                   Entamer une conversation
                 </Button>
