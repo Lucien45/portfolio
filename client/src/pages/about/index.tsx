@@ -219,7 +219,7 @@ const About = () => {
                   size="lg"
                   iconName="Mail"
                   iconPosition="left"
-                  onClick={() => window.location.href = '/contact'}
+                  // onClick={() => window.location.href = '/contact'}
                 >
                   Entamer une conversation
                 </Button>

@@ -352,7 +352,7 @@ const Skills: React.FC = () => {
                   size="lg"
                   iconName="Download"
                   iconPosition="left"
-                  onClick={() => window.open('/assets/Lucien_Skills_Matrix.pdf', '_blank')}
+                  // onClick={() => window.open('/assets/Lucien_Skills_Matrix.pdf', '_blank')}
                 >
                   Télécharger la matrice de compétences
                 </Button>
@@ -498,7 +498,7 @@ const Skills: React.FC = () => {
                 size="lg"
                 iconName="MessageCircle"
                 iconPosition="left"
-                onClick={() => window.location.href = '/contact'}
+                // onClick={() => window.location.href = '/contact'}
               >
                 Start a Conversation
               </Button>

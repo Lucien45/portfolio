@@ -41,7 +41,7 @@ const PersonalInfo: React.FC = () => {
         <div className="relative">
           <div className="w-32 h-32 rounded-full overflow-hidden border-4 border-primary/20 shadow-elevation">
             <Image
-              src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=300&h=300&fit=crop&crop=face"
+              src="https://ayttbfjahrieiqpzxjci.supabase.co/storage/v1/object/public/Photo/profile2.jpeg"
               alt="Lucien - Full Stack Developer"
               className="w-full h-full object-cover"
             />
@@ -114,7 +114,7 @@ const PersonalInfo: React.FC = () => {
             variant="outline"
             iconName="MessageCircle"
             iconPosition="left"
-            onClick={() => window.location.href = '/contact'}
+            // onClick={() => window.location.href = '/contact'}
           >
             Me contacter
           </Button>

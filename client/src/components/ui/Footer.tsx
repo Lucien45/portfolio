@@ -52,7 +52,7 @@ const Footer: React.FC = () => {
                 <li><a href="/projects" className="text-muted-foreground hover:text-foreground transition-colors">Projets</a></li>
                 <li><a href="/skills" className="text-muted-foreground hover:text-foreground transition-colors">compétences</a></li>
                 <li><a href="/experience" className="text-muted-foreground hover:text-foreground transition-colors">Expérience</a></li>
-                <li><a href="/contact" className="text-muted-foreground hover:text-foreground transition-colors">Contact</a></li>
+                <li><a href="/" className="text-muted-foreground hover:text-foreground transition-colors">Contact</a></li>
             </ul>
             </div>
 
@@ -63,8 +63,10 @@ const Footer: React.FC = () => {
                 <li className="text-muted-foreground">Développement Full Stack</li>
                 <li className="text-muted-foreground">React Applications</li>
                 <li className="text-muted-foreground">Développement d'API</li>
-                <li className="text-muted-foreground">Conception de base de données</li>
+                <li className="text-muted-foreground">Déploiement de projets</li>
+                <li className="text-muted-foreground">Maintenance et support</li>
                 <li className="text-muted-foreground">Conseil technique</li>
+                <li className="text-muted-foreground">Conception de base de données</li>
             </ul>
             </div>
         </div>
